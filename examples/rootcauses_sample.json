@@ -1,0 +1,107 @@
+[
+  {
+    "id": "rc-auth-001",
+    "title": "Redis session replication instability",
+    "status": "active",
+    "domain": {
+      "name": "authentication",
+      "subdomain": "oauth",
+      "team": "identity-platform"
+    },
+    "severity": "high",
+    "impact": {
+      "signal_count": 487
+    },
+    "priority_score": 87
+  },
+  {
+    "id": "rc-auth-002",
+    "title": "JWT token expiration edge case",
+    "status": "active",
+    "domain": {
+      "name": "authentication",
+      "subdomain": "oauth",
+      "team": "identity-platform"
+    },
+    "severity": "medium",
+    "impact": {
+      "signal_count": 123
+    },
+    "priority_score": 65
+  },
+  {
+    "id": "rc-auth-003",
+    "title": "LDAP sync failures during maintenance",
+    "status": "mitigating",
+    "domain": {
+      "name": "authentication",
+      "subdomain": "ldap",
+      "team": "identity-platform"
+    },
+    "severity": "high",
+    "impact": {
+      "signal_count": 89
+    },
+    "priority_score": 72
+  },
+  {
+    "id": "rc-pay-001",
+    "title": "Payment gateway timeout under load",
+    "status": "active",
+    "domain": {
+      "name": "payments",
+      "subdomain": "checkout",
+      "team": "payments-core"
+    },
+    "severity": "critical",
+    "impact": {
+      "signal_count": 892
+    },
+    "priority_score": 95
+  },
+  {
+    "id": "rc-pay-002",
+    "title": "Currency conversion rounding errors",
+    "status": "active",
+    "domain": {
+      "name": "payments",
+      "subdomain": "billing",
+      "team": "payments-core"
+    },
+    "severity": "medium",
+    "impact": {
+      "signal_count": 45
+    },
+    "priority_score": 55
+  },
+  {
+    "id": "rc-infra-001",
+    "title": "Kubernetes pod eviction during scaling",
+    "status": "active",
+    "domain": {
+      "name": "infrastructure",
+      "subdomain": "kubernetes",
+      "team": "platform-sre"
+    },
+    "severity": "high",
+    "impact": {
+      "signal_count": 234
+    },
+    "priority_score": 78
+  },
+  {
+    "id": "rc-sec-001",
+    "title": "CVE in base container image",
+    "status": "new",
+    "domain": {
+      "name": "security",
+      "subdomain": "container-security",
+      "team": "platform-security"
+    },
+    "severity": "critical",
+    "impact": {
+      "signal_count": 47
+    },
+    "priority_score": 90
+  }
+]

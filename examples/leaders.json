@@ -1,0 +1,16 @@
+{
+  "area_leaders": {
+    "authentication": "Jane Smith (VP Identity)",
+    "payments": "John Doe (VP Payments)",
+    "infrastructure": "Alice Wong (VP Platform)",
+    "security": "Bob Chen (CISO)"
+  },
+  "execution_leaders": {
+    "authentication|oauth": "Mike Johnson (Auth Team Lead)",
+    "authentication|ldap": "Sarah Lee (Directory Services Lead)",
+    "payments|checkout": "Chris Taylor (Checkout Team Lead)",
+    "payments|billing": "Pat Wilson (Billing Team Lead)",
+    "infrastructure|kubernetes": "Jordan Adams (K8s Team Lead)",
+    "security|container-security": "Morgan Davis (Container Security Lead)"
+  }
+}

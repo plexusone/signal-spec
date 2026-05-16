@@ -1,0 +1,38 @@
+{
+  "id": "sig-2024-005678",
+  "type": "security_finding",
+  "status": "new",
+  "source": {
+    "type": "security",
+    "name": "wiz",
+    "external_id": "WIZ-CVE-2024-1234",
+    "url": "https://app.wiz.io/findings/12345"
+  },
+  "domain": {
+    "name": "infrastructure",
+    "subdomain": "container-security",
+    "team": "platform-security"
+  },
+  "severity": "critical",
+  "summary": "Critical CVE in base container image affecting 47 services",
+  "description": "CVE-2024-1234 detected in alpine:3.18 base image. Remote code execution vulnerability. Affects all services using shared base image.",
+  "entities": [
+    {
+      "type": "container_image",
+      "name": "company/base-alpine:3.18",
+      "attributes": {
+        "registry": "gcr.io"
+      }
+    }
+  ],
+  "observed_at": "2024-03-16T09:00:00Z",
+  "received_at": "2024-03-16T09:05:00Z",
+  "fingerprint": "sha256:def456...",
+  "tags": ["cve", "container", "critical"],
+  "metadata": {
+    "cve_id": "CVE-2024-1234",
+    "cvss_score": 9.8,
+    "affected_services": 47,
+    "exploit_available": true
+  }
+}

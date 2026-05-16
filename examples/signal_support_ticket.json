@@ -1,0 +1,45 @@
+{
+  "id": "sig-2024-001234",
+  "type": "support_ticket",
+  "status": "mapped",
+  "source": {
+    "type": "ticketing",
+    "name": "zendesk",
+    "external_id": "ZD-98765",
+    "url": "https://company.zendesk.com/tickets/98765"
+  },
+  "domain": {
+    "name": "authentication",
+    "subdomain": "oauth",
+    "team": "identity-platform"
+  },
+  "severity": "high",
+  "summary": "OAuth refresh token failures causing repeated logouts",
+  "description": "Customer reports being logged out repeatedly. Error shows 'invalid_grant' when refreshing OAuth token. Started after recent mobile app update.",
+  "entities": [
+    {
+      "type": "service",
+      "name": "oauth-service",
+      "attributes": {
+        "environment": "production"
+      }
+    },
+    {
+      "type": "application",
+      "name": "mobile-app-ios",
+      "attributes": {
+        "version": "4.2.1"
+      }
+    }
+  ],
+  "observed_at": "2024-03-15T14:30:00Z",
+  "received_at": "2024-03-15T14:35:22Z",
+  "root_cause_id": "rc-auth-001",
+  "fingerprint": "sha256:abc123...",
+  "tags": ["enterprise", "mobile", "auth"],
+  "metadata": {
+    "customer_tier": "enterprise",
+    "affected_users": 150,
+    "escalated": true
+  }
+}

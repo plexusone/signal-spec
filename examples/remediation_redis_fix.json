@@ -1,0 +1,32 @@
+{
+  "id": "rem-001",
+  "title": "Implement Redis read-after-write consistency for session validation",
+  "description": "Modify session validation to use WAIT command ensuring replication before read. Add circuit breaker for Redis cluster failover scenarios. Update health checks to detect replication lag.",
+  "status": "deployed",
+  "root_cause_ids": ["rc-auth-001"],
+  "owner_team": "identity-platform",
+  "assignee": "jsmith",
+  "created_at": "2024-03-10T09:00:00Z",
+  "deployed_at": "2024-03-14T16:30:00Z",
+  "validated_at": null,
+  "efficacy": null,
+  "external_links": [
+    {
+      "type": "code_change",
+      "name": "github",
+      "external_id": "PR-4521",
+      "url": "https://github.com/company/oauth-service/pull/4521"
+    },
+    {
+      "type": "incident",
+      "name": "pagerduty",
+      "external_id": "INC-2024-0234",
+      "url": "https://company.pagerduty.com/incidents/Q1234567"
+    }
+  ],
+  "tags": ["redis", "consistency", "auth"],
+  "metadata": {
+    "rollback_plan": "Revert PR-4521 and restart oauth-service pods",
+    "validation_criteria": "Signal rate drops >80% within 7 days"
+  }
+}

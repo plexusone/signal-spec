@@ -1,0 +1,61 @@
+{
+  "id": "rc-auth-001",
+  "title": "Redis session replication instability causing OAuth token validation failures",
+  "description": "Intermittent Redis cluster replication lag causes session state inconsistency. When tokens are refreshed, the validation service sometimes reads stale data, resulting in invalid_grant errors.",
+  "status": "mitigating",
+  "domain": {
+    "name": "authentication",
+    "subdomain": "oauth",
+    "team": "identity-platform"
+  },
+  "severity": "high",
+  "symptom_patterns": [
+    "OAuth refresh token failures",
+    "Repeated logout events",
+    "invalid_grant errors",
+    "Session expired unexpectedly",
+    "Token validation timeout"
+  ],
+  "signal_ids": [
+    "sig-2024-001234",
+    "sig-2024-001235",
+    "sig-2024-001240",
+    "sig-2024-001241",
+    "sig-2024-001245"
+  ],
+  "impact": {
+    "signal_count": 487,
+    "affected_customers": 2341,
+    "affected_entities": [
+      {
+        "type": "service",
+        "name": "oauth-service"
+      },
+      {
+        "type": "service",
+        "name": "session-store"
+      }
+    ],
+    "escalation_rate": 0.12,
+    "estimated_revenue_loss": 45000
+  },
+  "trend": {
+    "direction": "stable",
+    "velocity": 15.3,
+    "period": {
+      "start": "2024-03-01T00:00:00Z",
+      "end": "2024-03-15T23:59:59Z"
+    }
+  },
+  "priority_score": 87,
+  "first_seen": "2024-02-28T10:15:00Z",
+  "last_seen": "2024-03-15T14:30:00Z",
+  "owner_team": "identity-platform",
+  "remediation_id": "rem-001",
+  "recurrence_count": 1,
+  "tags": ["redis", "auth", "session", "enterprise-impact"],
+  "metadata": {
+    "related_incidents": ["INC-2024-0234"],
+    "affected_regions": ["us-east-1", "us-west-2"]
+  }
+}
