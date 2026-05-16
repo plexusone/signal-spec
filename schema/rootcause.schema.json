@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://plexusone.dev/signal-spec/rootcause.schema.json",
+  "$ref": "#/$defs/RootCause",
+  "$defs": {
+    "Domain": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Category - the primary functional area"
+        },
+        "subdomain": {
+          "type": "string",
+          "description": "Subcategory within the category"
+        },
+        "team": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "name"
+      ]
+    },
+    "Entity": {
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "name"
+      ]
+    },
+    "ImpactMetrics": {
+      "properties": {
+        "signal_count": {
+          "type": "integer"
+        },
+        "affected_customers": {
+          "type": "integer"
+        },
+        "affected_entities": {
+          "items": {
+            "$ref": "#/$defs/Entity"
+          },
+          "type": "array"
+        },
+        "escalation_rate": {
+          "type": "number"
+        },
+        "estimated_revenue_loss": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "signal_count"
+      ]
+    },
+    "RootCause": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "domain": {
+          "$ref": "#/$defs/Domain"
+        },
+        "severity": {
+          "$ref": "#/$defs/Severity"
+        },
+        "symptom_patterns": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "signal_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "impact": {
+          "$ref": "#/$defs/ImpactMetrics"
+        },
+        "trend": {
+          "$ref": "#/$defs/Trend"
+        },
+        "priority_score": {
+          "type": "integer"
+        },
+        "first_seen": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_seen": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "owner_team": {
+          "type": "string"
+        },
+        "remediation_id": {
+          "type": "string"
+        },
+        "recurrence_count": {
+          "type": "integer"
+        },
+        "embedding": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "tags": {
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "status",
+        "domain",
+        "severity",
+        "impact",
+        "priority_score",
+        "first_seen",
+        "last_seen",
+        "recurrence_count"
+      ]
+    },
+    "Severity": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "info"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "active",
+        "mitigating",
+        "validating",
+        "stable",
+        "regressed",
+        "resolved",
+        "archived"
+      ]
+    },
+    "TimeRange": {
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ]
+    },
+    "Trend": {
+      "properties": {
+        "direction": {
+          "$ref": "#/$defs/TrendDirection"
+        },
+        "velocity": {
+          "type": "number"
+        },
+        "period": {
+          "$ref": "#/$defs/TimeRange"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "direction",
+        "velocity",
+        "period"
+      ]
+    },
+    "TrendDirection": {
+      "type": "string",
+      "enum": [
+        "increasing",
+        "stable",
+        "decreasing"
+      ]
+    }
+  }
+}

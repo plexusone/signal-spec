@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://plexusone.dev/signal-spec/validation_signal.schema.json",
+  "$ref": "#/$defs/ValidationSignal",
+  "$defs": {
+    "ValidationResult": {
+      "type": "string",
+      "enum": [
+        "improved",
+        "no_change",
+        "regressed"
+      ]
+    },
+    "ValidationSignal": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "remediation_id": {
+          "type": "string"
+        },
+        "root_cause_id": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/ValidationResult"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "baseline_signal_rate": {
+          "type": "number"
+        },
+        "current_signal_rate": {
+          "type": "number"
+        },
+        "reduction_percent": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "remediation_id",
+        "root_cause_id",
+        "type",
+        "observed_at",
+        "baseline_signal_rate",
+        "current_signal_rate",
+        "reduction_percent"
+      ]
+    }
+  }
+}

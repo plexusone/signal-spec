@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://plexusone.dev/signal-spec/signal.schema.json",
+  "$ref": "#/$defs/Signal",
+  "$defs": {
+    "Domain": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Category - the primary functional area"
+        },
+        "subdomain": {
+          "type": "string",
+          "description": "Subcategory within the category"
+        },
+        "team": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "name"
+      ]
+    },
+    "Entity": {
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "name"
+      ]
+    },
+    "Severity": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "info"
+      ]
+    },
+    "Signal": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/Type"
+        },
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceSystem"
+        },
+        "domain": {
+          "$ref": "#/$defs/Domain"
+        },
+        "severity": {
+          "$ref": "#/$defs/Severity"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "entities": {
+          "items": {
+            "$ref": "#/$defs/Entity"
+          },
+          "type": "array"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "received_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "root_cause_id": {
+          "type": "string"
+        },
+        "fingerprint": {
+          "type": "string"
+        },
+        "embedding": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "tags": {
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "status",
+        "source",
+        "domain",
+        "severity",
+        "summary",
+        "observed_at",
+        "received_at"
+      ]
+    },
+    "SourceSystem": {
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "external_id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "name"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "processing",
+        "mapped",
+        "ignored",
+        "archived"
+      ]
+    },
+    "Type": {
+      "type": "string",
+      "enum": [
+        "support_ticket",
+        "cloud_incident",
+        "security_finding",
+        "posture_drift",
+        "alert",
+        "outage",
+        "vulnerability",
+        "feedback"
+      ]
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://plexusone.dev/signal-spec/remediation.schema.json",
+  "$ref": "#/$defs/Remediation",
+  "$defs": {
+    "Efficacy": {
+      "properties": {
+        "signal_reduction": {
+          "type": "number"
+        },
+        "validation_period": {
+          "$ref": "#/$defs/TimeRange"
+        },
+        "confidence_level": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "signal_reduction",
+        "validation_period",
+        "confidence_level"
+      ]
+    },
+    "Remediation": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "root_cause_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "owner_team": {
+          "type": "string"
+        },
+        "assignee": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deployed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "validated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "efficacy": {
+          "$ref": "#/$defs/Efficacy"
+        },
+        "external_links": {
+          "items": {
+            "$ref": "#/$defs/SourceSystem"
+          },
+          "type": "array"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "tags": {
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "status",
+        "root_cause_ids",
+        "owner_team",
+        "created_at"
+      ]
+    },
+    "SourceSystem": {
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "external_id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "name"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "approved",
+        "in_progress",
+        "deployed",
+        "validating",
+        "effective",
+        "ineffective",
+        "rolled_back",
+        "cancelled"
+      ]
+    },
+    "TimeRange": {
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ]
+    }
+  }
+}
