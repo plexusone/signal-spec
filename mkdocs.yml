@@ -1,36 +1,35 @@
 site_name: Signal Spec
 site_description: Canonical data model for operational intelligence
-site_url: https://plexusone.github.io/signal-spec/
+site_url: https://plexusone.github.io/signal-spec
 repo_url: https://github.com/plexusone/signal-spec
 repo_name: plexusone/signal-spec
 
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+    # Dark mode first (PlexusOne default)
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - search.suggest
     - search.highlight
     - content.code.copy
-    - content.tabs.link
 
-plugins:
-  - search
+extra_css:
+  - https://plexusone.dev/css/plexusone-mkdocs.css
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -42,8 +41,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.details
   - admonition
+  - pymdownx.details
   - tables
   - toc:
       permalink: true
@@ -65,6 +64,7 @@ nav:
       - Validation: integration/validation.md
   - CLI Reference: cli.md
   - Examples: examples.md
+  - API Reference: https://pkg.go.dev/github.com/plexusone/signal-spec
 
 extra:
   social:
