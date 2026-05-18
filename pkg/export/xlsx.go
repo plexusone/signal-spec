@@ -11,21 +11,21 @@ import (
 
 // DomainSummary aggregates root cause metrics by domain/subdomain.
 type DomainSummary struct {
-	Domain          string
-	Subdomain       string
-	IssueCount      int
-	TotalSignals    int
+	Domain           string
+	Subdomain        string
+	IssueCount       int
+	TotalSignals     int
 	AvgPriorityScore float64
-	MaxSeverity     string
-	AreaLeader      string // Assignable - maps to domain owner
-	ExecutionLeader string // Assignable - maps to subdomain owner
-	TopIssues       []string
+	MaxSeverity      string
+	AreaLeader       string // Assignable - maps to domain owner
+	ExecutionLeader  string // Assignable - maps to subdomain owner
+	TopIssues        []string
 }
 
 // SummaryReport contains aggregated domain summaries and root cause details.
 type SummaryReport struct {
-	Summaries   []DomainSummary
-	RootCauses  []rootcause.RootCause
+	Summaries  []DomainSummary
+	RootCauses []rootcause.RootCause
 }
 
 // BuildSummaryReport aggregates root causes by domain/subdomain.
@@ -303,18 +303,18 @@ func (r *SummaryReport) writeRootCausesSheet(f *excelize.File, severityColors ma
 
 	// Set column widths
 	colWidths := map[string]float64{
-		"A": 15,  // ID
-		"B": 50,  // Title
-		"C": 18,  // Domain
-		"D": 18,  // Subdomain
-		"E": 12,  // Status
-		"F": 10,  // Severity
-		"G": 12,  // Signal Count
-		"H": 12,  // Priority Score
-		"I": 12,  // First Seen
-		"J": 12,  // Last Seen
-		"K": 20,  // Owner Team
-		"L": 30,  // Tags
+		"A": 15, // ID
+		"B": 50, // Title
+		"C": 18, // Domain
+		"D": 18, // Subdomain
+		"E": 12, // Status
+		"F": 10, // Severity
+		"G": 12, // Signal Count
+		"H": 12, // Priority Score
+		"I": 12, // First Seen
+		"J": 12, // Last Seen
+		"K": 20, // Owner Team
+		"L": 30, // Tags
 	}
 	for col, width := range colWidths {
 		f.SetColWidth(sheetName, col, col, width)

@@ -80,7 +80,7 @@ func runSchemaGenerate(cmd *cobra.Command, args []string) error {
 		}
 
 		filename := filepath.Join(schemaOutputDir, s.name+".schema.json")
-		if err := os.WriteFile(filename, data, 0644); err != nil {
+		if err := os.WriteFile(filename, data, 0600); err != nil {
 			return fmt.Errorf("writing %s: %w", filename, err)
 		}
 

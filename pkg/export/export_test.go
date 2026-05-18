@@ -12,27 +12,27 @@ import (
 func TestBuildSummaryReport(t *testing.T) {
 	rootCauses := []rootcause.RootCause{
 		{
-			ID:     "rc-001",
-			Title:  "Issue 1",
-			Domain: common.Domain{Name: "auth", Subdomain: "oauth"},
-			Severity: common.SeverityHigh,
-			Impact:   rootcause.ImpactMetrics{SignalCount: 100},
+			ID:            "rc-001",
+			Title:         "Issue 1",
+			Domain:        common.Domain{Name: "auth", Subdomain: "oauth"},
+			Severity:      common.SeverityHigh,
+			Impact:        rootcause.ImpactMetrics{SignalCount: 100},
 			PriorityScore: 80,
 		},
 		{
-			ID:     "rc-002",
-			Title:  "Issue 2",
-			Domain: common.Domain{Name: "auth", Subdomain: "oauth"},
-			Severity: common.SeverityCritical,
-			Impact:   rootcause.ImpactMetrics{SignalCount: 200},
+			ID:            "rc-002",
+			Title:         "Issue 2",
+			Domain:        common.Domain{Name: "auth", Subdomain: "oauth"},
+			Severity:      common.SeverityCritical,
+			Impact:        rootcause.ImpactMetrics{SignalCount: 200},
 			PriorityScore: 90,
 		},
 		{
-			ID:     "rc-003",
-			Title:  "Issue 3",
-			Domain: common.Domain{Name: "payments", Subdomain: "checkout"},
-			Severity: common.SeverityMedium,
-			Impact:   rootcause.ImpactMetrics{SignalCount: 50},
+			ID:            "rc-003",
+			Title:         "Issue 3",
+			Domain:        common.Domain{Name: "payments", Subdomain: "checkout"},
+			Severity:      common.SeverityMedium,
+			Impact:        rootcause.ImpactMetrics{SignalCount: 50},
 			PriorityScore: 60,
 		},
 	}
@@ -109,11 +109,11 @@ func TestLeaderMappingApply(t *testing.T) {
 func TestWriteXLSX(t *testing.T) {
 	rootCauses := []rootcause.RootCause{
 		{
-			ID:     "rc-001",
-			Title:  "Test Issue",
-			Domain: common.Domain{Name: "test", Subdomain: "unit"},
-			Severity: common.SeverityHigh,
-			Impact:   rootcause.ImpactMetrics{SignalCount: 100},
+			ID:            "rc-001",
+			Title:         "Test Issue",
+			Domain:        common.Domain{Name: "test", Subdomain: "unit"},
+			Severity:      common.SeverityHigh,
+			Impact:        rootcause.ImpactMetrics{SignalCount: 100},
 			PriorityScore: 80,
 		},
 	}
@@ -153,7 +153,7 @@ func TestLoadRootCausesFromFile(t *testing.T) {
 		{"id": "rc-002", "title": "Issue 2", "domain": {"name": "payments"}}
 	]`
 
-	if err := os.WriteFile(testFile, []byte(jsonData), 0644); err != nil {
+	if err := os.WriteFile(testFile, []byte(jsonData), 0600); err != nil {
 		t.Fatalf("failed to write test file: %v", err)
 	}
 
@@ -176,7 +176,7 @@ func TestLoadRootCausesFromFileSingleObject(t *testing.T) {
 
 	jsonData := `{"id": "rc-001", "title": "Single Issue", "domain": {"name": "auth"}}`
 
-	if err := os.WriteFile(testFile, []byte(jsonData), 0644); err != nil {
+	if err := os.WriteFile(testFile, []byte(jsonData), 0600); err != nil {
 		t.Fatalf("failed to write test file: %v", err)
 	}
 
@@ -197,14 +197,14 @@ func TestLoadRootCausesFromDir(t *testing.T) {
 	file1 := `{"id": "rc-001", "title": "Issue 1", "domain": {"name": "auth"}}`
 	file2 := `{"id": "rc-002", "title": "Issue 2", "domain": {"name": "payments"}}`
 
-	if err := os.WriteFile(filepath.Join(tmpDir, "rc1.json"), []byte(file1), 0644); err != nil {
+	if err := os.WriteFile(filepath.Join(tmpDir, "rc1.json"), []byte(file1), 0600); err != nil {
 		t.Fatalf("failed to write file1: %v", err)
 	}
-	if err := os.WriteFile(filepath.Join(tmpDir, "rc2.json"), []byte(file2), 0644); err != nil {
+	if err := os.WriteFile(filepath.Join(tmpDir, "rc2.json"), []byte(file2), 0600); err != nil {
 		t.Fatalf("failed to write file2: %v", err)
 	}
 	// Create a non-JSON file that should be ignored
-	if err := os.WriteFile(filepath.Join(tmpDir, "readme.txt"), []byte("ignore me"), 0644); err != nil {
+	if err := os.WriteFile(filepath.Join(tmpDir, "readme.txt"), []byte("ignore me"), 0600); err != nil {
 		t.Fatalf("failed to write txt file: %v", err)
 	}
 

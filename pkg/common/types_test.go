@@ -24,13 +24,13 @@ func TestTagValidate(t *testing.T) {
 		{"p0-incident", false},
 		{"redis-cluster-issue", false},
 		{"a1b2c3", false},
-		{"Invalid", true},       // uppercase
-		{"invalid_tag", true},   // underscore
-		{"invalid tag", true},   // space
-		{"-invalid", true},      // starts with hyphen
-		{"123invalid", true},    // starts with number
-		{"UPPERCASE", true},     // all uppercase
-		{"camelCase", true},     // camelCase
+		{"Invalid", true},     // uppercase
+		{"invalid_tag", true}, // underscore
+		{"invalid tag", true}, // space
+		{"-invalid", true},    // starts with hyphen
+		{"123invalid", true},  // starts with number
+		{"UPPERCASE", true},   // all uppercase
+		{"camelCase", true},   // camelCase
 	}
 
 	for _, tt := range tests {

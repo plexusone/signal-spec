@@ -56,9 +56,9 @@ func TestSignalJSONMarshal(t *testing.T) {
 	now := time.Now().UTC().Truncate(time.Second)
 
 	sig := Signal{
-		ID:       "sig-001",
-		Type:     TypeSupportTicket,
-		Status:   StatusNew,
+		ID:     "sig-001",
+		Type:   TypeSupportTicket,
+		Status: StatusNew,
 		Source: common.SourceSystem{
 			Type: "ticketing",
 			Name: "zendesk",
