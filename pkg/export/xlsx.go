@@ -107,7 +107,7 @@ func (r *SummaryReport) WriteXLSX(filename string) error {
 		return fmt.Errorf("creating sheet: %w", err)
 	}
 	f.SetActiveSheet(index)
-	f.DeleteSheet("Sheet1")
+	_ = f.DeleteSheet("Sheet1") // Default sheet, error unlikely
 
 	// Define headers
 	headers := []string{
@@ -137,8 +137,8 @@ func (r *SummaryReport) WriteXLSX(filename string) error {
 
 	for col, header := range headers {
 		cell, _ := excelize.CoordinatesToCellName(col+1, 1)
-		f.SetCellValue(sheetName, cell, header)
-		f.SetCellStyle(sheetName, cell, cell, headerStyle)
+		_ = f.SetCellValue(sheetName, cell, header)
+		_ = f.SetCellStyle(sheetName, cell, cell, headerStyle)
 	}
 
 	// Severity color mapping
@@ -150,18 +150,18 @@ func (r *SummaryReport) WriteXLSX(filename string) error {
 		"info":     "ADD8E6",
 	}
 
-	// Write data rows
+	// Write data rows (SetCellValue errors ignored - valid cells from controlled input)
 	for row, summary := range r.Summaries {
 		rowNum := row + 2
 
-		f.SetCellValue(sheetName, cellName(1, rowNum), summary.Domain)
-		f.SetCellValue(sheetName, cellName(2, rowNum), summary.Subdomain)
-		f.SetCellValue(sheetName, cellName(3, rowNum), summary.IssueCount)
-		f.SetCellValue(sheetName, cellName(4, rowNum), summary.TotalSignals)
-		f.SetCellValue(sheetName, cellName(5, rowNum), fmt.Sprintf("%.1f", summary.AvgPriorityScore))
-		f.SetCellValue(sheetName, cellName(6, rowNum), summary.MaxSeverity)
-		f.SetCellValue(sheetName, cellName(7, rowNum), summary.AreaLeader)
-		f.SetCellValue(sheetName, cellName(8, rowNum), summary.ExecutionLeader)
+		_ = f.SetCellValue(sheetName, cellName(1, rowNum), summary.Domain)
+		_ = f.SetCellValue(sheetName, cellName(2, rowNum), summary.Subdomain)
+		_ = f.SetCellValue(sheetName, cellName(3, rowNum), summary.IssueCount)
+		_ = f.SetCellValue(sheetName, cellName(4, rowNum), summary.TotalSignals)
+		_ = f.SetCellValue(sheetName, cellName(5, rowNum), fmt.Sprintf("%.1f", summary.AvgPriorityScore))
+		_ = f.SetCellValue(sheetName, cellName(6, rowNum), summary.MaxSeverity)
+		_ = f.SetCellValue(sheetName, cellName(7, rowNum), summary.AreaLeader)
+		_ = f.SetCellValue(sheetName, cellName(8, rowNum), summary.ExecutionLeader)
 
 		// Join top issues
 		topIssuesStr := ""
@@ -171,14 +171,14 @@ func (r *SummaryReport) WriteXLSX(filename string) error {
 			}
 			topIssuesStr += issue
 		}
-		f.SetCellValue(sheetName, cellName(9, rowNum), topIssuesStr)
+		_ = f.SetCellValue(sheetName, cellName(9, rowNum), topIssuesStr)
 
 		// Color-code severity cell
 		if color, ok := severityColors[summary.MaxSeverity]; ok {
 			style, _ := f.NewStyle(&excelize.Style{
 				Fill: excelize.Fill{Type: "pattern", Color: []string{color}, Pattern: 1},
 			})
-			f.SetCellStyle(sheetName, cellName(6, rowNum), cellName(6, rowNum), style)
+			_ = f.SetCellStyle(sheetName, cellName(6, rowNum), cellName(6, rowNum), style)
 		}
 	}
 
@@ -195,11 +195,11 @@ func (r *SummaryReport) WriteXLSX(filename string) error {
 		"I": 60, // Top Issues
 	}
 	for col, width := range colWidths {
-		f.SetColWidth(sheetName, col, col, width)
+		_ = f.SetColWidth(sheetName, col, col, width) // Valid column, error impossible
 	}
 
 	// Freeze header row
-	f.SetPanes(sheetName, &excelize.Panes{
+	_ = f.SetPanes(sheetName, &excelize.Panes{
 		Freeze:      true,
 		Split:       false,
 		XSplit:      0,
@@ -210,7 +210,7 @@ func (r *SummaryReport) WriteXLSX(filename string) error {
 
 	// Add auto-filter
 	lastRow := len(r.Summaries) + 1
-	f.AutoFilter(sheetName, fmt.Sprintf("A1:I%d", lastRow), nil)
+	_ = f.AutoFilter(sheetName, fmt.Sprintf("A1:I%d", lastRow), nil)
 
 	// Create Root Causes sheet
 	if err := r.writeRootCausesSheet(f, severityColors); err != nil {
@@ -255,32 +255,32 @@ func (r *SummaryReport) writeRootCausesSheet(f *excelize.File, severityColors ma
 
 	for col, header := range headers {
 		cell := cellName(col+1, 1)
-		f.SetCellValue(sheetName, cell, header)
-		f.SetCellStyle(sheetName, cell, cell, headerStyle)
+		_ = f.SetCellValue(sheetName, cell, header)
+		_ = f.SetCellStyle(sheetName, cell, cell, headerStyle)
 	}
 
-	// Write data rows
+	// Write data rows (SetCellValue errors ignored - valid cells from controlled input)
 	for row, rc := range r.RootCauses {
 		rowNum := row + 2
 
-		f.SetCellValue(sheetName, cellName(1, rowNum), rc.ID)
-		f.SetCellValue(sheetName, cellName(2, rowNum), rc.Title)
-		f.SetCellValue(sheetName, cellName(3, rowNum), rc.Domain.Name)
-		f.SetCellValue(sheetName, cellName(4, rowNum), rc.Domain.Subdomain)
-		f.SetCellValue(sheetName, cellName(5, rowNum), string(rc.Status))
-		f.SetCellValue(sheetName, cellName(6, rowNum), string(rc.Severity))
-		f.SetCellValue(sheetName, cellName(7, rowNum), rc.Impact.SignalCount)
-		f.SetCellValue(sheetName, cellName(8, rowNum), rc.PriorityScore)
+		_ = f.SetCellValue(sheetName, cellName(1, rowNum), rc.ID)
+		_ = f.SetCellValue(sheetName, cellName(2, rowNum), rc.Title)
+		_ = f.SetCellValue(sheetName, cellName(3, rowNum), rc.Domain.Name)
+		_ = f.SetCellValue(sheetName, cellName(4, rowNum), rc.Domain.Subdomain)
+		_ = f.SetCellValue(sheetName, cellName(5, rowNum), string(rc.Status))
+		_ = f.SetCellValue(sheetName, cellName(6, rowNum), string(rc.Severity))
+		_ = f.SetCellValue(sheetName, cellName(7, rowNum), rc.Impact.SignalCount)
+		_ = f.SetCellValue(sheetName, cellName(8, rowNum), rc.PriorityScore)
 
 		// Format dates
 		if !rc.FirstSeen.IsZero() {
-			f.SetCellValue(sheetName, cellName(9, rowNum), rc.FirstSeen.Format("2006-01-02"))
+			_ = f.SetCellValue(sheetName, cellName(9, rowNum), rc.FirstSeen.Format("2006-01-02"))
 		}
 		if !rc.LastSeen.IsZero() {
-			f.SetCellValue(sheetName, cellName(10, rowNum), rc.LastSeen.Format("2006-01-02"))
+			_ = f.SetCellValue(sheetName, cellName(10, rowNum), rc.LastSeen.Format("2006-01-02"))
 		}
 
-		f.SetCellValue(sheetName, cellName(11, rowNum), rc.OwnerTeam)
+		_ = f.SetCellValue(sheetName, cellName(11, rowNum), rc.OwnerTeam)
 
 		// Join tags
 		tagsStr := ""
@@ -290,14 +290,14 @@ func (r *SummaryReport) writeRootCausesSheet(f *excelize.File, severityColors ma
 			}
 			tagsStr += string(tag)
 		}
-		f.SetCellValue(sheetName, cellName(12, rowNum), tagsStr)
+		_ = f.SetCellValue(sheetName, cellName(12, rowNum), tagsStr)
 
 		// Color-code severity cell
 		if color, ok := severityColors[string(rc.Severity)]; ok {
 			style, _ := f.NewStyle(&excelize.Style{
 				Fill: excelize.Fill{Type: "pattern", Color: []string{color}, Pattern: 1},
 			})
-			f.SetCellStyle(sheetName, cellName(6, rowNum), cellName(6, rowNum), style)
+			_ = f.SetCellStyle(sheetName, cellName(6, rowNum), cellName(6, rowNum), style)
 		}
 	}
 
@@ -317,11 +317,11 @@ func (r *SummaryReport) writeRootCausesSheet(f *excelize.File, severityColors ma
 		"L": 30, // Tags
 	}
 	for col, width := range colWidths {
-		f.SetColWidth(sheetName, col, col, width)
+		_ = f.SetColWidth(sheetName, col, col, width) // Valid column, error impossible
 	}
 
 	// Freeze header row
-	f.SetPanes(sheetName, &excelize.Panes{
+	_ = f.SetPanes(sheetName, &excelize.Panes{
 		Freeze:      true,
 		Split:       false,
 		XSplit:      0,
@@ -332,7 +332,7 @@ func (r *SummaryReport) writeRootCausesSheet(f *excelize.File, severityColors ma
 
 	// Add auto-filter
 	lastRow := len(r.RootCauses) + 1
-	f.AutoFilter(sheetName, fmt.Sprintf("A1:L%d", lastRow), nil)
+	_ = f.AutoFilter(sheetName, fmt.Sprintf("A1:L%d", lastRow), nil)
 
 	return nil
 }

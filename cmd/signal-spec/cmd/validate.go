@@ -36,7 +36,7 @@ func init() {
 	rootCmd.AddCommand(validateCmd)
 
 	validateCmd.Flags().StringVarP(&validateType, "type", "t", "", "Type to validate against (signal, rootcause, remediation)")
-	validateCmd.MarkFlagRequired("type")
+	_ = validateCmd.MarkFlagRequired("type") // Flag exists, error impossible
 }
 
 func runValidate(cmd *cobra.Command, args []string) error {
