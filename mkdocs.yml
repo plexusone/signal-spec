@@ -65,6 +65,8 @@ nav:
   - CLI Reference: cli.md
   - Examples: examples.md
   - API Reference: https://pkg.go.dev/github.com/plexusone/signal-spec
+  - Releases:
+      - v0.1.0: releases/v0.1.0.md
 
 extra:
   social:
