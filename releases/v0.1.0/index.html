@@ -10,26 +10,26 @@
       
       
       
-        <link rel="canonical" href="https://plexusone.github.io/signal-spec/">
+        <link rel="canonical" href="https://plexusone.github.io/signal-spec/releases/v0.1.0/">
+      
+      
+        <link rel="prev" href="../../examples/">
       
       
       
-        <link rel="next" href="concepts/overview/">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Signal Spec</title>
+        <title>v0.1.0 - Signal Spec</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
     
       <link rel="stylesheet" href="https://plexusone.dev/css/plexusone-mkdocs.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#signal-spec" class="md-skip">
+        <a href="#release-notes-v010" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Signal Spec" class="md-header__button md-logo" aria-label="Signal Spec" data-md-component="logo">
+    <a href="../.." title="Signal Spec" class="md-header__button md-logo" aria-label="Signal Spec" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              v0.1.0
             
           </span>
         </div>
@@ -234,7 +234,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Signal Spec" class="md-nav__button md-logo" aria-label="Signal Spec" data-md-component="logo">
+    <a href="../.." title="Signal Spec" class="md-nav__button md-logo" aria-label="Signal Spec" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -261,32 +261,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -297,122 +275,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-signal-spec" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Signal Spec?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-entities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Entities
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Start
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quick Start">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install CLI
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validate-a-signal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Validate a Signal
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-report" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate Report
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -469,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/overview/" class="md-nav__link">
+      <a href="../../concepts/overview/" class="md-nav__link">
         
   
   
@@ -492,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/lifecycle/" class="md-nav__link">
+      <a href="../../concepts/lifecycle/" class="md-nav__link">
         
   
   
@@ -515,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="concepts/domains/" class="md-nav__link">
+      <a href="../../concepts/domains/" class="md-nav__link">
         
   
   
@@ -590,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemas/signal/" class="md-nav__link">
+      <a href="../../schemas/signal/" class="md-nav__link">
         
   
   
@@ -613,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemas/rootcause/" class="md-nav__link">
+      <a href="../../schemas/rootcause/" class="md-nav__link">
         
   
   
@@ -636,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemas/remediation/" class="md-nav__link">
+      <a href="../../schemas/remediation/" class="md-nav__link">
         
   
   
@@ -659,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemas/common/" class="md-nav__link">
+      <a href="../../schemas/common/" class="md-nav__link">
         
   
   
@@ -734,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integration/producing/" class="md-nav__link">
+      <a href="../../integration/producing/" class="md-nav__link">
         
   
   
@@ -757,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integration/consuming/" class="md-nav__link">
+      <a href="../../integration/consuming/" class="md-nav__link">
         
   
   
@@ -780,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integration/validation/" class="md-nav__link">
+      <a href="../../integration/validation/" class="md-nav__link">
         
   
   
@@ -810,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   
@@ -832,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/" class="md-nav__link">
+      <a href="../../examples/" class="md-nav__link">
         
   
   
@@ -873,8 +735,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -885,13 +749,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -907,7 +769,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Releases
@@ -918,10 +780,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="releases/v0.1.0/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    v0.1.0
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -932,6 +816,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highlights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rootcause" class="md-nav__link">
+    <span class="md-ellipsis">
+      RootCause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediation-validationsignal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation &amp; ValidationSignal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Reports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xlsx-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      XLSX Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -971,64 +1013,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-signal-spec" class="md-nav__link">
+  <a href="#highlights" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Signal Spec?
+      Highlights
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-entities" class="md-nav__link">
+  <a href="#core-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Entities
+      Core Types
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Start
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quick Start">
+    <nav class="md-nav" aria-label="Core Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-cli" class="md-nav__link">
+  <a href="#signal" class="md-nav__link">
     <span class="md-ellipsis">
-      Install CLI
+      Signal
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-a-signal" class="md-nav__link">
+  <a href="#rootcause" class="md-nav__link">
     <span class="md-ellipsis">
-      Validate a Signal
+      RootCause
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#generate-report" class="md-nav__link">
+  <a href="#remediation-validationsignal" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate Report
+      Remediation &amp; ValidationSignal
     </span>
   </a>
   
@@ -1040,9 +1064,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#common-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Common Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Reports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xlsx-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      XLSX Report
     </span>
   </a>
   
@@ -1058,9 +1133,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Next Steps
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
     </span>
   </a>
   
@@ -1085,81 +1169,151 @@
   
 
 
-<h1 id="signal-spec">Signal Spec<a class="headerlink" href="#signal-spec" title="Permanent link">&para;</a></h1>
-<p>Canonical data model for operational intelligence.</p>
-<h2 id="what-is-signal-spec">What is Signal Spec?<a class="headerlink" href="#what-is-signal-spec" title="Permanent link">&para;</a></h2>
-<p>Signal Spec defines the schemas and types for normalizing operational observations from diverse sources into a unified format. It enables correlation, root cause analysis, and remediation tracking across your operational landscape.</p>
-<h2 id="core-entities">Core Entities<a class="headerlink" href="#core-entities" title="Permanent link">&para;</a></h2>
+<h1 id="release-notes-v010">Release Notes: v0.1.0<a class="headerlink" href="#release-notes-v010" title="Permanent link">&para;</a></h1>
+<p><strong>Release Date:</strong> 2026-05-17</p>
+<h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Initial Release</strong>: Canonical data model for operational intelligence</li>
+<li><strong>Core Types</strong>: Signal, RootCause, Remediation, ValidationSignal</li>
+<li><strong>JSON Schema</strong>: Auto-generated schemas from Go types with enum constraints</li>
+<li><strong>XLSX Reports</strong>: Domain summary and root cause detail sheets</li>
+<li><strong>CLI Tool</strong>: Validation, schema generation, and report commands</li>
+</ul>
+<h2 id="core-types">Core Types<a class="headerlink" href="#core-types" title="Permanent link">&para;</a></h2>
+<h3 id="signal">Signal<a class="headerlink" href="#signal" title="Permanent link">&para;</a></h3>
+<p>Atomic operational observations from external systems. Signals are the input layer - raw events normalized from various sources.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/signal-spec/pkg/signal&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">sig</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">ID</span><span class="p">:</span><span class="w">       </span><span class="s">&quot;sig-2024-001234&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">Type</span><span class="p">:</span><span class="w">     </span><span class="nx">signal</span><span class="p">.</span><span class="nx">TypeSupportTicket</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nx">Status</span><span class="p">:</span><span class="w">   </span><span class="nx">signal</span><span class="p">.</span><span class="nx">StatusNew</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nx">Severity</span><span class="p">:</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">SeverityHigh</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nx">Summary</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;OAuth refresh token failures&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Signal Types:</strong></p>
+<ul>
+<li><code>support_ticket</code> - Customer support tickets</li>
+<li><code>cloud_incident</code> - Cloud provider incidents</li>
+<li><code>security_finding</code> - Security scan findings</li>
+<li><code>posture_drift</code> - Configuration drift</li>
+<li><code>alert</code> - Monitoring alerts</li>
+<li><code>outage</code> - Service outages</li>
+<li><code>vulnerability</code> - Vulnerability scans</li>
+<li><code>feedback</code> - Customer feedback</li>
+</ul>
+<h3 id="rootcause">RootCause<a class="headerlink" href="#rootcause" title="Permanent link">&para;</a></h3>
+<p>Persistent clustered operational issues with lifecycle tracking.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/signal-spec/pkg/rootcause&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">rc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rootcause</span><span class="p">.</span><span class="nx">RootCause</span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">ID</span><span class="p">:</span><span class="w">     </span><span class="s">&quot;rc-auth-001&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nx">Title</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;Redis session replication instability&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">rootcause</span><span class="p">.</span><span class="nx">StatusActive</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Lifecycle States:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>NEW → ACTIVE → MITIGATING → VALIDATING → STABLE → RESOLVED
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                              ↓
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                          REGRESSED
+</code></pre></div>
+<h3 id="remediation-validationsignal">Remediation &amp; ValidationSignal<a class="headerlink" href="#remediation-validationsignal" title="Permanent link">&para;</a></h3>
+<p>Track corrective actions and measure efficacy.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/signal-spec/pkg/remediation&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nx">rem</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">remediation</span><span class="p">.</span><span class="nx">Remediation</span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nx">ID</span><span class="p">:</span><span class="w">           </span><span class="s">&quot;rem-001&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">Title</span><span class="p">:</span><span class="w">        </span><span class="s">&quot;Implement Redis read-after-write consistency&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nx">Status</span><span class="p">:</span><span class="w">       </span><span class="nx">remediation</span><span class="p">.</span><span class="nx">StatusDeployed</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">RootCauseIDs</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;rc-auth-001&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="common-types">Common Types<a class="headerlink" href="#common-types" title="Permanent link">&para;</a></h2>
+<p>Shared types used across all entities:</p>
 <table>
 <thead>
 <tr>
-<th>Entity</th>
-<th>Purpose</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Signal</strong></td>
-<td>Normalized operational observations (tickets, alerts, incidents, findings)</td>
+<td><code>Severity</code></td>
+<td>Impact level: critical, high, medium, low, info</td>
 </tr>
 <tr>
-<td><strong>RootCause</strong></td>
-<td>Persistent clustered issues with lifecycle tracking</td>
+<td><code>Domain</code></td>
+<td>Category/subcategory classification</td>
 </tr>
 <tr>
-<td><strong>Remediation</strong></td>
-<td>Corrective actions with efficacy measurement</td>
+<td><code>Entity</code></td>
+<td>System components (services, endpoints, etc.)</td>
 </tr>
 <tr>
-<td><strong>ValidationSignal</strong></td>
-<td>Evidence of fix effectiveness</td>
+<td><code>SourceSystem</code></td>
+<td>Signal origin (ticketing, alerting, security)</td>
+</tr>
+<tr>
+<td><code>Tag</code></td>
+<td>User-defined labels (kebab-case validated)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>flowchart TD
-    A[External Systems] --&gt; B[Signal]
-    B --&gt;|LLM Analysis| C[RootCause]
-    C --&gt; D[Remediation]
-    D --&gt; E[ValidationSignal]
-    E --&gt;|Feedback Loop| C</code></pre>
-<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<h3 id="install-cli">Install CLI<a class="headerlink" href="#install-cli" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>install<span class="w"> </span>github.com/plexusone/signal-spec/cmd/signal-spec@latest
+<h2 id="cli-commands">CLI Commands<a class="headerlink" href="#cli-commands" title="Permanent link">&para;</a></h2>
+<h3 id="validate">Validate<a class="headerlink" href="#validate" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>signal-spec<span class="w"> </span>validate<span class="w"> </span>-t<span class="w"> </span>signal<span class="w"> </span>signal.json
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>signal-spec<span class="w"> </span>validate<span class="w"> </span>-t<span class="w"> </span>rootcause<span class="w"> </span>rootcause.json
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>signal-spec<span class="w"> </span>validate<span class="w"> </span>-t<span class="w"> </span>remediation<span class="w"> </span>remediation.json
 </code></pre></div>
-<h3 id="validate-a-signal">Validate a Signal<a class="headerlink" href="#validate-a-signal" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>signal-spec<span class="w"> </span>validate<span class="w"> </span>-t<span class="w"> </span>signal<span class="w"> </span>signal.json
+<h3 id="generate-schemas">Generate Schemas<a class="headerlink" href="#generate-schemas" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>signal-spec<span class="w"> </span>schema<span class="w"> </span>generate<span class="w"> </span>-o<span class="w"> </span>./schemas/
 </code></pre></div>
-<h3 id="generate-report">Generate Report<a class="headerlink" href="#generate-report" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>signal-spec<span class="w"> </span>report<span class="w"> </span>-i<span class="w"> </span>rootcauses.json<span class="w"> </span>-o<span class="w"> </span>summary.xlsx
+<h3 id="generate-reports">Generate Reports<a class="headerlink" href="#generate-reports" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>signal-spec<span class="w"> </span>report<span class="w"> </span>-i<span class="w"> </span>rootcauses.json<span class="w"> </span>-o<span class="w"> </span>summary.xlsx
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>signal-spec<span class="w"> </span>report<span class="w"> </span>-d<span class="w"> </span>./rootcauses/<span class="w"> </span>--leaders<span class="w"> </span>leaders.json<span class="w"> </span>-o<span class="w"> </span>summary.xlsx
 </code></pre></div>
-<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h2 id="xlsx-report">XLSX Report<a class="headerlink" href="#xlsx-report" title="Permanent link">&para;</a></h2>
+<p>Generated reports include two sheets:</p>
+<p><strong>Domain Summary:</strong></p>
 <ul>
-<li><strong>Go types as source of truth</strong> - JSON schemas generated from Go structs</li>
-<li><strong>Lifecycle tracking</strong> - Monitor issues from detection through resolution</li>
-<li><strong>Closed-loop validation</strong> - Measure whether fixes actually work</li>
-<li><strong>Domain taxonomy</strong> - Categorize issues by domain/subdomain for prioritization</li>
-<li><strong>Impact metrics</strong> - Quantify customer and business impact</li>
+<li>Domain/Subdomain aggregation</li>
+<li>Issue count and total signals</li>
+<li>Average priority score</li>
+<li>Maximum severity</li>
+<li>Area and execution leader assignments</li>
+</ul>
+<p><strong>Root Causes:</strong></p>
+<ul>
+<li>Full root cause listing</li>
+<li>Status, severity, signal count</li>
+<li>First/last seen dates</li>
+<li>Owner team and tags</li>
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Go</label><label for="__tabbed_1_2">JSON Schema</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/plexusone/signal-spec
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/plexusone/signal-spec@v0.1.0
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Download schemas from <a href="https://github.com/plexusone/signal-spec/releases">GitHub releases</a> or generate:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>signal-spec<span class="w"> </span>schema<span class="w"> </span>generate<span class="w"> </span>-o<span class="w"> </span>./schemas/
+<p>Install CLI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>go<span class="w"> </span>install<span class="w"> </span>github.com/plexusone/signal-spec/cmd/signal-spec@v0.1.0
 </code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="concepts/overview/">Concepts Overview</a> - Understand the data model</li>
-<li><a href="schemas/signal/">Schema Reference</a> - Detailed type documentation</li>
-<li><a href="integration/producing/">Integration Guide</a> - Start producing signals</li>
+<li><code>github.com/spf13/cobra</code> - CLI framework</li>
+<li><code>github.com/xuri/excelize/v2</code> - XLSX generation</li>
+<li><code>github.com/invopop/jsonschema</code> - JSON Schema generation</li>
+<li><code>github.com/grokify/mogo</code> - Kebab-case validation</li>
+</ul>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../concepts/overview/">Concepts Overview</a> - Core entities and data flow</li>
+<li><a href="../../concepts/lifecycle/">Lifecycle States</a> - State transitions</li>
+<li><a href="../../schemas/signal/">Schema Reference</a> - Type documentation</li>
+<li><a href="../../integration/producing/">Integration Guide</a> - Producing signals</li>
+<li><a href="../../cli/">CLI Reference</a> - Command documentation</li>
 </ul>
 
 
@@ -1231,10 +1385,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
