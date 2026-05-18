@@ -1,0 +1,40 @@
+{
+  "irVersion": "1.0",
+  "project": "signal-spec",
+  "repository": "https://github.com/plexusone/signal-spec",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "maintainers": ["plexusone"],
+  "releases": [
+    {
+      "version": "v0.1.0",
+      "date": "2026-05-17",
+      "highlights": [
+        { "description": "Initial release of signal-spec with core types, JSON schemas, XLSX export, and CLI" }
+      ],
+      "added": [
+        { "description": "Core `Signal` type for atomic operational observations from external systems", "commit": "c95faed" },
+        { "description": "Core `RootCause` type for persistent clustered operational issues with lifecycle states", "commit": "e539bba" },
+        { "description": "Core `Remediation` and `ValidationSignal` types for tracking corrective actions and efficacy", "commit": "569a2f5" },
+        { "description": "Common types: `Severity`, `Domain`, `Entity`, `SourceSystem`, `Tag` with kebab-case validation", "commit": "6b27bf2" },
+        { "description": "JSON Schema generation from Go types with enum constraints", "commit": "002c8b1" },
+        { "description": "XLSX report generation with Domain Summary and Root Causes sheets", "commit": "18f8979" },
+        { "description": "Leader mapping support for area/execution leader assignments", "commit": "18f8979" },
+        { "description": "CLI with Cobra: `report`, `schema generate`, `validate` commands", "commit": "9c285bc" },
+        { "description": "Tag validation using `mogo/text/stringcase.IsKebabCase()`", "commit": "6b27bf2" }
+      ],
+      "documentation": [
+        { "description": "Example JSON files for signals, root causes, remediations, and leader mappings", "commit": "42812e8" },
+        { "description": "README with CLI usage and project structure", "commit": "2da5998" },
+        { "description": "Architecture documentation with data flow and design principles", "commit": "2da5998" }
+      ],
+      "tests": [
+        { "description": "Unit tests for common types including tag validation" },
+        { "description": "Unit tests for Signal type and JSON marshaling" },
+        { "description": "Unit tests for RootCause type and lifecycle states" },
+        { "description": "Unit tests for Remediation and ValidationSignal types" },
+        { "description": "Unit tests for export package including XLSX generation" }
+      ]
+    }
+  ]
+}
