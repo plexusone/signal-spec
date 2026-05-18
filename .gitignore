@@ -28,3 +28,6 @@ Thumbs.db
 # Build
 /bin/
 /dist/
+
+# MkDocs
+/site/

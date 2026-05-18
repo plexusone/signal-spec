@@ -1,6 +1,4 @@
-# Signal Spec Architecture
-
-## Overview
+# Overview
 
 Signal Spec defines the canonical data model for operational intelligence. It provides schemas and types for normalizing operational observations from diverse sources into a unified format for correlation, root cause analysis, and remediation tracking.
 
@@ -56,31 +54,41 @@ Evidence of remediation effectiveness. Generated after deployment to measure sig
 
 ## Data Flow
 
-```
-External Systems
-      │
-      ▼
-┌─────────────┐
-│   Signal    │  ← Normalized observations
-└─────────────┘
-      │
-      │ LLM Analysis + Graphize Context
-      ▼
-┌─────────────┐
-│  RootCause  │  ← Persistent clustered issues
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│ Remediation │  ← Corrective actions
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│ Validation  │  ← Efficacy measurement
-└─────────────┘
-      │
-      └──────────────► Continuous improvement loop
+```mermaid
+flowchart TD
+    subgraph Input
+        T[Support Tickets]
+        A[Alerts]
+        I[Incidents]
+        S[Security Findings]
+        V[Vulnerabilities]
+    end
+
+    subgraph Normalization
+        SIG[Signal]
+    end
+
+    subgraph Analysis
+        RC[RootCause]
+        LLM[LLM + Graphize Context]
+    end
+
+    subgraph Resolution
+        REM[Remediation]
+        VAL[ValidationSignal]
+    end
+
+    T --> SIG
+    A --> SIG
+    I --> SIG
+    S --> SIG
+    V --> SIG
+
+    SIG --> LLM
+    LLM --> RC
+    RC --> REM
+    REM --> VAL
+    VAL -->|Feedback| RC
 ```
 
 ## LLM Integration
@@ -89,15 +97,28 @@ The mapping from Signal to RootCause is performed by LLM analysis with access to
 
 1. **Raw signal data** - The normalized signal content
 2. **Historical patterns** - Previous signals and root causes
-3. **Codebase context** - Via graphize knowledge graphs
+3. **Codebase context** - Via [graphize](https://github.com/plexusone/graphize) knowledge graphs
 4. **Documentation** - System docs and runbooks
 
 This is orchestrated externally to the spec - the spec defines the contracts, not the mapping logic.
 
 ## Design Principles
 
-1. **Go types are source of truth** - JSON schemas are generated from Go structs
-2. **Signals are observations, not managed entities** - They flow in and get mapped
-3. **Root causes are durable** - They persist, evolve, and track lifecycle
-4. **Closed-loop validation** - Measure whether fixes work
-5. **Semantic consistency** - Enable longitudinal analytics
+| Principle | Description |
+|-----------|-------------|
+| **Go types are source of truth** | JSON schemas are generated from Go structs |
+| **Signals are observations** | They flow in and get mapped, not managed |
+| **Root causes are durable** | They persist, evolve, and track lifecycle |
+| **Closed-loop validation** | Measure whether fixes work |
+| **Semantic consistency** | Enable longitudinal analytics |
+
+## Entity Relationships
+
+```mermaid
+erDiagram
+    Signal ||--o| RootCause : "maps to"
+    RootCause ||--o{ Signal : "aggregates"
+    RootCause ||--o{ Remediation : "addressed by"
+    Remediation ||--o{ ValidationSignal : "validated by"
+    ValidationSignal }o--|| RootCause : "measures"
+```
