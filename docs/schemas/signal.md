@@ -37,6 +37,7 @@ A Signal is an atomic operational observation from an external system. Signals a
 | `fingerprint` | string | Hash for deduplication |
 | `embedding` | float32[] | Vector for semantic similarity |
 | `metadata` | object | Source-specific additional data |
+| `derived` | [DerivedMetrics](#derivedmetrics) | Computed scores excluded from fingerprinting |
 | `tags` | [Tag](common.md#tag)[] | User-defined labels (kebab-case) |
 
 ## Type Enum
@@ -53,6 +54,13 @@ Categorizes the signal source.
 | `outage` | Service outage |
 | `vulnerability` | Vulnerability scan result |
 | `feedback` | Customer feedback |
+| `enhancement_request` | Customer feature request |
+| `competitive_gap` | Gap vs. a competitor identified from win/loss analysis |
+| `competitor_launch` | Competitor product announcement |
+| `analyst_finding` | Insight extracted from an analyst report |
+| `market_observation` | General market trend |
+
+See [Enhancement Signal Metadata](#enhancement-signal-metadata) and [Cross-Repo References](#cross-repo-references) below for the well-known `metadata` keys used with these product signal types.
 
 ## Status Enum
 
@@ -65,6 +73,56 @@ Processing state of the signal.
 | `mapped` | Successfully mapped to root cause |
 | `ignored` | Determined to be noise/duplicate |
 | `archived` | Processed and archived |
+
+## DerivedMetrics
+
+Computed scores kept separate from a signal's identity. These values are recomputed over time and are explicitly excluded from [fingerprinting](#fingerprinting), so identical raw input always produces the same fingerprint regardless of derived values.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `frustration` | float | Weighted signal count multiplied by age |
+| `momentum` | float | Trailing signal count over a rolling window (e.g., 30 days) |
+| `reach` | float | Count of distinct customer references contributing to a root cause |
+| `urgency` | float | Case count weighted by severity |
+| `computed_at` | datetime | When these metrics were last computed |
+| `extra` | object | Additional derived scores not covered by the well-known fields |
+
+```json
+{
+  "derived": {
+    "frustration": 4.2,
+    "momentum": 1.8,
+    "reach": 12,
+    "urgency": 3.5,
+    "computed_at": "2026-07-20T00:00:00Z"
+  }
+}
+```
+
+## Enhancement Signal Metadata
+
+`enhancement_request` signals carry structured product data via well-known `metadata` keys. All keys are optional; adapters populate whichever keys their source system provides.
+
+| Metadata Key | Type | Description |
+|--------------|------|-------------|
+| `votes` | int | Total vote/upvote count |
+| `subscribers` | int | Number of watchers/subscribers |
+| `organizations` | string[] | Requesting organization names |
+| `customers` | string[] | Named customer identifiers |
+| `opportunities` | string[] | Sales opportunity IDs linked to this request |
+| `estimated_arr` | int64 | Estimated ARR at stake, in cents |
+
+## Cross-Repo References
+
+Signals carry typed references to entities owned by other repositories (e.g., MarketSpec, OrganizationSpec) via well-known `metadata` keys. References use the `{type}:{slug}` format defined by [`pkg/ref`](https://github.com/plexusone/signal-spec/tree/main/pkg/ref).
+
+| Metadata Key | Example |
+|--------------|---------|
+| `customer_ref` | `customer:acme-001` |
+| `capability_ref` | `capability:sso` |
+| `market_ref` | `market:identity-governance` |
+| `competitor_ref` | `competitor:okta` |
+| `analyst_report_ref` | `analyst-report:gartner-mq-iam-2026` |
 
 ## Example
 
@@ -127,6 +185,20 @@ sig := signal.Signal{
     ReceivedAt: time.Now(),
 }
 ```
+
+## Fingerprinting
+
+`signal.ComputeFingerprint()` returns a deterministic SHA-256 hex digest computed from a signal's identity fields (`ID`, `Type`, `Source`, `Domain`, `Severity`, `Summary`, `Description`, `Entities`, `ObservedAt`, `Metadata`, `Tags`). Mutable and derived fields — `Status`, `Derived`, `Embedding`, `ReceivedAt`, `RootCauseID`, and `Fingerprint` itself — are excluded, so the same raw input always produces the same fingerprint regardless of processing state.
+
+```go
+fp, err := signal.ComputeFingerprint(sig)
+if err != nil {
+    // handle error
+}
+sig.Fingerprint = fp
+```
+
+Use fingerprints to deduplicate signals ingested from the same underlying event across multiple adapters or retries.
 
 ## Validation
 

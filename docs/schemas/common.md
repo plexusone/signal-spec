@@ -48,6 +48,7 @@ A system component referenced by signals or root causes.
 |-------|------|----------|-------------|
 | `type` | string | Yes | Entity type |
 | `name` | string | Yes | Entity identifier |
+| `ref` | string | No | Typed cross-repo reference in `{type}:{slug}` format (e.g., `customer:acme-001`, `market:identity-governance`); see [`pkg/ref`](https://github.com/plexusone/signal-spec/tree/main/pkg/ref) for known types |
 | `attributes` | object | No | Additional metadata |
 
 ### Common Entity Types
