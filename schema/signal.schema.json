@@ -3,6 +3,34 @@
   "$id": "https://plexusone.dev/signal-spec/signal.schema.json",
   "$ref": "#/$defs/Signal",
   "$defs": {
+    "DerivedMetrics": {
+      "properties": {
+        "frustration": {
+          "type": "number"
+        },
+        "momentum": {
+          "type": "number"
+        },
+        "reach": {
+          "type": "number"
+        },
+        "urgency": {
+          "type": "number"
+        },
+        "computed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "extra": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
     "Domain": {
       "properties": {
         "name": {
@@ -29,6 +57,9 @@
           "type": "string"
         },
         "name": {
+          "type": "string"
+        },
+        "ref": {
           "type": "string"
         },
         "attributes": {
@@ -110,6 +141,9 @@
         "metadata": {
           "type": "object"
         },
+        "derived": {
+          "$ref": "#/$defs/DerivedMetrics"
+        },
         "tags": {
           "items": {
             "type": "string",
@@ -174,7 +208,12 @@
         "alert",
         "outage",
         "vulnerability",
-        "feedback"
+        "feedback",
+        "enhancement_request",
+        "competitive_gap",
+        "competitor_launch",
+        "analyst_finding",
+        "market_observation"
       ]
     }
   }
