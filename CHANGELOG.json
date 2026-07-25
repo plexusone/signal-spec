@@ -7,6 +7,33 @@
   "maintainers": ["plexusone"],
   "releases": [
     {
+      "version": "v0.2.0",
+      "date": "2026-07-25",
+      "highlights": [
+        { "description": "5 new product signal types for capturing customer and market intelligence: enhancement_request, competitive_gap, competitor_launch, analyst_finding, market_observation" },
+        { "description": "`pkg/ref` package with `TypedRef` for cross-repo entity references (customer, capability, market, competitor, analyst-report)" },
+        { "description": "Deterministic signal fingerprinting via `ComputeFingerprint()` for deduplication" },
+        { "description": "Embedded JSON schemas via `go:embed` for runtime schema access without file I/O" }
+      ],
+      "added": [
+        { "description": "5 new `signal.Type` values for product intelligence: `enhancement_request`, `competitive_gap`, `competitor_launch`, `analyst_finding`, `market_observation`", "commit": "bb99750" },
+        { "description": "Metadata key constants for enhancement signals: `MetaVotes`, `MetaSubscribers`, `MetaOrganizations`, `MetaCustomers`, `MetaOpportunities`, `MetaEstimatedARR`", "commit": "bb99750" },
+        { "description": "Metadata key constants for cross-repo references: `MetaCustomerRef`, `MetaCapabilityRef`, `MetaMarketRef`, `MetaCompetitorRef`, `MetaAnalystReportRef`", "commit": "bb99750" },
+        { "description": "`DerivedMetrics` struct for computed scores (frustration, momentum, reach, urgency) excluded from fingerprinting", "commit": "bb99750" },
+        { "description": "`pkg/ref` package with `TypedRef` type and `Parse`, `Validate`, `ValidateStrict`, `ValidateSlug` functions for `{type}:{slug}` cross-repo references", "commit": "4d66220" },
+        { "description": "`Entity.Ref` field for linking signal entities to external repository definitions via typed reference", "commit": "c1f41d9" },
+        { "description": "`signal.ComputeFingerprint()` returning a deterministic SHA-256 digest of a signal's identity fields, excluding mutable/derived fields", "commit": "fac3650" },
+        { "description": "`schema/` package with `go:embed` directives exposing `SignalSchema`, `RootCauseSchema`, `RemediationSchema`, and `ValidationSignalSchema` as `[]byte`", "commit": "6616d53" }
+      ],
+      "documentation": [
+        { "description": "Updated README shields", "commit": "d63800d" }
+      ],
+      "dependencies": [
+        { "description": "Bump `github.com/xuri/excelize/v2` from 2.10.1 to 2.11.0", "commit": "85a5cbb" },
+        { "description": "Bump `github.com/grokify/mogo` from 0.74.5 to 0.74.6", "commit": "cb9f423" }
+      ]
+    },
+    {
       "version": "v0.1.0",
       "date": "2026-05-17",
       "highlights": [
