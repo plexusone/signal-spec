@@ -28,10 +28,11 @@ Canonical data model for operational intelligence.
 
 Signal Spec defines the schemas and types for:
 
-- **Signals** - Normalized operational observations (tickets, alerts, incidents, findings)
+- **Signals** - Normalized operational and product observations (tickets, alerts, incidents, findings, enhancement requests, competitive intelligence)
 - **Root Causes** - Persistent clustered issues with lifecycle tracking
 - **Remediations** - Corrective actions with efficacy measurement
 - **Validation Signals** - Evidence of fix effectiveness
+- **Typed References** - Cross-repo entity links via `pkg/ref` (`{type}:{slug}`)
 
 ## Structure
 
@@ -46,11 +47,12 @@ signal-spec/
 │       └── validate.go
 ├── pkg/
 │   ├── common/       # Shared types (severity, domain, entity)
-│   ├── signal/       # Raw signal type
+│   ├── signal/       # Raw signal type, fingerprinting, metadata conventions
 │   ├── rootcause/    # Root cause type
 │   ├── remediation/  # Remediation and validation types
+│   ├── ref/          # Typed cross-repo entity references
 │   └── export/       # XLSX report generation
-├── schema/           # Generated JSON schemas
+├── schema/           # Generated JSON schemas, embedded via go:embed
 ├── examples/         # Example payloads
 └── docs/             # Architecture documentation
 ```
@@ -99,6 +101,49 @@ rc := rootcause.RootCause{
     Status: rootcause.StatusActive,
     // ...
 }
+```
+
+### Product Signals
+
+Signal Spec covers product and market intelligence alongside operational signals via 5 additional signal types: `enhancement_request`, `competitive_gap`, `competitor_launch`, `analyst_finding`, and `market_observation`.
+
+```go
+sig := signal.Signal{
+    ID:   "sig-2026-005678",
+    Type: signal.TypeEnhancementRequest,
+    Metadata: map[string]any{
+        signal.MetaVotes:       142,
+        signal.MetaSubscribers: 38,
+        signal.MetaCustomerRef: "customer:acme-001",
+    },
+}
+
+// Deterministic fingerprint for deduplication
+sig.Fingerprint, _ = signal.ComputeFingerprint(sig)
+```
+
+### Cross-Repo References
+
+`pkg/ref` defines `TypedRef`, a `{type}:{slug}` format for referencing entities owned by other repositories (e.g., a market defined in MarketSpec):
+
+```go
+import "github.com/plexusone/signal-spec/pkg/ref"
+
+r := ref.New(ref.TypeMarket, "identity-governance") // "market:identity-governance"
+err := ref.ValidateStrict(r)
+```
+
+`common.Entity.Ref` carries the same format for linking signal entities to their canonical definitions.
+
+### Embedded Schemas
+
+The `schema/` package exposes generated JSON schemas at runtime via `go:embed`, so consumers can validate without reading files from disk:
+
+```go
+import "github.com/plexusone/signal-spec/schema"
+
+// schema.SignalSchema, schema.RootCauseSchema, schema.RemediationSchema,
+// schema.ValidationSignalSchema are []byte; schema.All is an embed.FS
 ```
 
 ## Core Concepts
