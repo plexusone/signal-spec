@@ -102,6 +102,245 @@ A security scan finding as a signal:
 
 ---
 
+## Product Signal Examples
+
+Product signal types (`enhancement_request`, `competitive_gap`, `competitor_launch`, `analyst_finding`, `market_observation`) flow through the same pipeline as operational signals but carry structured product data via well-known `metadata` keys and typed cross-repo references. See [`signal.MetaVotes`, `signal.MetaSubscribers`, and related constants](schemas/signal.md#enhancement-signal-metadata) and the [`pkg/ref`](schemas/ref.md) reference format.
+
+### Enhancement Request Signal
+
+A feature request aggregated from a feedback board, carrying vote/subscriber counts and cross-repo references to the affected customers and market:
+
+```json
+{
+  "id": "sig-2026-010001",
+  "type": "enhancement_request",
+  "status": "new",
+  "source": {
+    "type": "feedback",
+    "name": "productboard",
+    "external_id": "PB-4821",
+    "url": "https://company.productboard.com/feature/4821"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "sso",
+    "team": "identity-platform"
+  },
+  "severity": "medium",
+  "summary": "Support SCIM group provisioning for Okta integration",
+  "description": "Enterprise customers using Okta as an identity provider need automatic group membership sync via SCIM, not just user provisioning.",
+  "entities": [
+    {
+      "type": "capability",
+      "name": "scim-provisioning",
+      "ref": "capability:scim-provisioning"
+    },
+    {
+      "type": "customer",
+      "name": "Acme Corp",
+      "ref": "customer:acme-001"
+    }
+  ],
+  "observed_at": "2026-06-01T00:00:00Z",
+  "received_at": "2026-06-01T00:05:00Z",
+  "tags": ["enterprise", "sso", "scim"],
+  "metadata": {
+    "votes": 142,
+    "subscribers": 58,
+    "organizations": ["Acme Corp", "Globex", "Initech"],
+    "customers": ["acme-001", "globex-014"],
+    "opportunities": ["OPP-88213"],
+    "estimated_arr": 24000000,
+    "market_ref": "market:identity-governance",
+    "capability_ref": "capability:scim-provisioning"
+  },
+  "derived": {
+    "frustration": 6.1,
+    "momentum": 3.4,
+    "reach": 12,
+    "urgency": 2.8,
+    "computed_at": "2026-07-20T00:00:00Z"
+  }
+}
+```
+
+Field notes:
+
+- `metadata.votes`, `metadata.subscribers`, `metadata.organizations`, `metadata.customers`, `metadata.opportunities`, and `metadata.estimated_arr` correspond to the `signal.MetaVotes`, `signal.MetaSubscribers`, `signal.MetaOrganizations`, `signal.MetaCustomers`, `signal.MetaOpportunities`, and `signal.MetaEstimatedARR` Go constants. `estimated_arr` is in cents (`$240,000.00` above).
+- `metadata.market_ref` and `metadata.capability_ref` are typed references (`signal.MetaMarketRef`, `signal.MetaCapabilityRef`) in `{type}:{slug}` format, validated by [`pkg/ref`](schemas/ref.md).
+- `entities[].ref` links an entity directly to its canonical definition in another repo (here, MarketSpec's `capability:scim-provisioning` and OrganizationSpec's `customer:acme-001`).
+- `derived` holds recomputed scores and is excluded from `ComputeFingerprint()`.
+
+### Competitive Gap Signal
+
+A gap identified from win/loss analysis, referencing the losing competitor and affected market:
+
+```json
+{
+  "id": "sig-2026-010002",
+  "type": "competitive_gap",
+  "status": "new",
+  "source": {
+    "type": "sales",
+    "name": "gong",
+    "external_id": "CALL-99231",
+    "url": "https://company.gong.io/calls/99231"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "high",
+  "summary": "Lost enterprise deal to Okta over lack of access certification workflows",
+  "description": "Win/loss interview with Initech (closed-lost) cites missing periodic access certification and attestation reporting as the deciding factor against Okta Identity Governance.",
+  "entities": [
+    {
+      "type": "competitor",
+      "name": "Okta",
+      "ref": "competitor:okta"
+    },
+    {
+      "type": "customer",
+      "name": "Initech",
+      "ref": "customer:initech-002"
+    }
+  ],
+  "observed_at": "2026-06-10T00:00:00Z",
+  "received_at": "2026-06-10T00:10:00Z",
+  "tags": ["win-loss", "enterprise", "governance"],
+  "metadata": {
+    "organizations": ["Initech"],
+    "opportunities": ["OPP-91004"],
+    "estimated_arr": 18000000,
+    "competitor_ref": "competitor:okta",
+    "market_ref": "market:identity-governance"
+  }
+}
+```
+
+### Competitor Launch Signal
+
+A tracked competitor product announcement:
+
+```json
+{
+  "id": "sig-2026-010003",
+  "type": "competitor_launch",
+  "status": "new",
+  "source": {
+    "type": "market_intel",
+    "name": "competitor-rss",
+    "external_id": "OKTA-2026-06-15",
+    "url": "https://www.okta.com/blog/2026/06/identity-governance-launch"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "medium",
+  "summary": "Okta launches Identity Governance access certification module",
+  "description": "Okta announced general availability of periodic access certification and attestation reporting as part of Okta Identity Governance, directly addressing a gap cited in recent competitive losses.",
+  "entities": [
+    {
+      "type": "competitor",
+      "name": "Okta",
+      "ref": "competitor:okta"
+    }
+  ],
+  "observed_at": "2026-06-15T00:00:00Z",
+  "received_at": "2026-06-15T06:00:00Z",
+  "tags": ["competitor-launch", "governance"],
+  "metadata": {
+    "competitor_ref": "competitor:okta",
+    "market_ref": "market:identity-governance",
+    "announcement_type": "general_availability"
+  }
+}
+```
+
+### Analyst Finding Signal
+
+An insight extracted from an analyst report:
+
+```json
+{
+  "id": "sig-2026-010004",
+  "type": "analyst_finding",
+  "status": "new",
+  "source": {
+    "type": "analyst",
+    "name": "gartner",
+    "external_id": "GARTNER-MQ-IAM-2026",
+    "url": "https://www.gartner.com/en/documents/gartner-mq-iam-2026"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "medium",
+  "summary": "Gartner MQ for IAM cites access certification as a required capability for Leaders quadrant",
+  "description": "The 2026 Gartner Magic Quadrant for Identity and Access Management identifies periodic access certification workflows as a differentiating capability separating Leaders from Visionaries.",
+  "entities": [
+    {
+      "type": "analyst-report",
+      "name": "Gartner MQ IAM 2026",
+      "ref": "analyst-report:gartner-mq-iam-2026"
+    }
+  ],
+  "observed_at": "2026-06-20T00:00:00Z",
+  "received_at": "2026-06-20T09:00:00Z",
+  "tags": ["gartner", "governance", "quadrant"],
+  "metadata": {
+    "analyst_report_ref": "analyst-report:gartner-mq-iam-2026",
+    "market_ref": "market:identity-governance",
+    "quadrant_position": "visionaries"
+  }
+}
+```
+
+### Market Observation Signal
+
+A general market trend observation:
+
+```json
+{
+  "id": "sig-2026-010005",
+  "type": "market_observation",
+  "status": "new",
+  "source": {
+    "type": "market_intel",
+    "name": "internal-research",
+    "external_id": "MKT-2026-Q2-014"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "low",
+  "summary": "Growing enterprise demand for continuous access certification over periodic reviews",
+  "description": "Quarterly market scan shows increasing RFP language requiring continuous (event-driven) access certification rather than quarterly/annual review cycles, particularly in regulated industries.",
+  "entities": [
+    {
+      "type": "market",
+      "name": "Identity Governance",
+      "ref": "market:identity-governance"
+    }
+  ],
+  "observed_at": "2026-06-25T00:00:00Z",
+  "received_at": "2026-06-25T00:00:00Z",
+  "tags": ["market-trend", "governance", "regulated"],
+  "metadata": {
+    "market_ref": "market:identity-governance"
+  }
+}
+```
+
+---
+
 ## Root Cause Examples
 
 ### Authentication Root Cause
@@ -339,6 +578,11 @@ Example files are available in the repository:
 
 - [`examples/signal_support_ticket.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_support_ticket.json)
 - [`examples/signal_security_finding.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_security_finding.json)
+- [`examples/signal_enhancement_request.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_enhancement_request.json)
+- [`examples/signal_competitive_gap.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_competitive_gap.json)
+- [`examples/signal_competitor_launch.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_competitor_launch.json)
+- [`examples/signal_analyst_finding.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_analyst_finding.json)
+- [`examples/signal_market_observation.json`](https://github.com/plexusone/signal-spec/blob/main/examples/signal_market_observation.json)
 - [`examples/rootcause_auth_failure.json`](https://github.com/plexusone/signal-spec/blob/main/examples/rootcause_auth_failure.json)
 - [`examples/rootcauses_sample.json`](https://github.com/plexusone/signal-spec/blob/main/examples/rootcauses_sample.json)
 - [`examples/remediation_redis_fix.json`](https://github.com/plexusone/signal-spec/blob/main/examples/remediation_redis_fix.json)

@@ -1,0 +1,31 @@
+{
+  "id": "sig-2026-010005",
+  "type": "market_observation",
+  "status": "new",
+  "source": {
+    "type": "market_intel",
+    "name": "internal-research",
+    "external_id": "MKT-2026-Q2-014"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "low",
+  "summary": "Growing enterprise demand for continuous access certification over periodic reviews",
+  "description": "Quarterly market scan shows increasing RFP language requiring continuous (event-driven) access certification rather than quarterly/annual review cycles, particularly in regulated industries.",
+  "entities": [
+    {
+      "type": "market",
+      "name": "Identity Governance",
+      "ref": "market:identity-governance"
+    }
+  ],
+  "observed_at": "2026-06-25T00:00:00Z",
+  "received_at": "2026-06-25T00:00:00Z",
+  "tags": ["market-trend", "governance", "regulated"],
+  "metadata": {
+    "market_ref": "market:identity-governance"
+  }
+}

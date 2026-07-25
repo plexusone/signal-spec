@@ -1,0 +1,34 @@
+{
+  "id": "sig-2026-010003",
+  "type": "competitor_launch",
+  "status": "new",
+  "source": {
+    "type": "market_intel",
+    "name": "competitor-rss",
+    "external_id": "OKTA-2026-06-15",
+    "url": "https://www.okta.com/blog/2026/06/identity-governance-launch"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "medium",
+  "summary": "Okta launches Identity Governance access certification module",
+  "description": "Okta announced general availability of periodic access certification and attestation reporting as part of Okta Identity Governance, directly addressing a gap cited in recent competitive losses.",
+  "entities": [
+    {
+      "type": "competitor",
+      "name": "Okta",
+      "ref": "competitor:okta"
+    }
+  ],
+  "observed_at": "2026-06-15T00:00:00Z",
+  "received_at": "2026-06-15T06:00:00Z",
+  "tags": ["competitor-launch", "governance"],
+  "metadata": {
+    "competitor_ref": "competitor:okta",
+    "market_ref": "market:identity-governance",
+    "announcement_type": "general_availability"
+  }
+}

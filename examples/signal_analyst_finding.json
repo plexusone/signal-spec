@@ -1,0 +1,34 @@
+{
+  "id": "sig-2026-010004",
+  "type": "analyst_finding",
+  "status": "new",
+  "source": {
+    "type": "analyst",
+    "name": "gartner",
+    "external_id": "GARTNER-MQ-IAM-2026",
+    "url": "https://www.gartner.com/en/documents/gartner-mq-iam-2026"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "governance",
+    "team": "product-identity"
+  },
+  "severity": "medium",
+  "summary": "Gartner MQ for IAM cites access certification as a required capability for Leaders quadrant",
+  "description": "The 2026 Gartner Magic Quadrant for Identity and Access Management identifies periodic access certification workflows as a differentiating capability separating Leaders from Visionaries.",
+  "entities": [
+    {
+      "type": "analyst-report",
+      "name": "Gartner MQ IAM 2026",
+      "ref": "analyst-report:gartner-mq-iam-2026"
+    }
+  ],
+  "observed_at": "2026-06-20T00:00:00Z",
+  "received_at": "2026-06-20T09:00:00Z",
+  "tags": ["gartner", "governance", "quadrant"],
+  "metadata": {
+    "analyst_report_ref": "analyst-report:gartner-mq-iam-2026",
+    "market_ref": "market:identity-governance",
+    "quadrant_position": "visionaries"
+  }
+}

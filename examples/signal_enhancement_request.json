@@ -1,0 +1,51 @@
+{
+  "id": "sig-2026-010001",
+  "type": "enhancement_request",
+  "status": "new",
+  "source": {
+    "type": "feedback",
+    "name": "productboard",
+    "external_id": "PB-4821",
+    "url": "https://company.productboard.com/feature/4821"
+  },
+  "domain": {
+    "name": "identity",
+    "subdomain": "sso",
+    "team": "identity-platform"
+  },
+  "severity": "medium",
+  "summary": "Support SCIM group provisioning for Okta integration",
+  "description": "Enterprise customers using Okta as an identity provider need automatic group membership sync via SCIM, not just user provisioning.",
+  "entities": [
+    {
+      "type": "capability",
+      "name": "scim-provisioning",
+      "ref": "capability:scim-provisioning"
+    },
+    {
+      "type": "customer",
+      "name": "Acme Corp",
+      "ref": "customer:acme-001"
+    }
+  ],
+  "observed_at": "2026-06-01T00:00:00Z",
+  "received_at": "2026-06-01T00:05:00Z",
+  "tags": ["enterprise", "sso", "scim"],
+  "metadata": {
+    "votes": 142,
+    "subscribers": 58,
+    "organizations": ["Acme Corp", "Globex", "Initech"],
+    "customers": ["acme-001", "globex-014"],
+    "opportunities": ["OPP-88213"],
+    "estimated_arr": 24000000,
+    "market_ref": "market:identity-governance",
+    "capability_ref": "capability:scim-provisioning"
+  },
+  "derived": {
+    "frustration": 6.1,
+    "momentum": 3.4,
+    "reach": 12,
+    "urgency": 2.8,
+    "computed_at": "2026-07-20T00:00:00Z"
+  }
+}
