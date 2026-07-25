@@ -58,6 +58,7 @@ nav:
       - RootCause: schemas/rootcause.md
       - Remediation: schemas/remediation.md
       - Common Types: schemas/common.md
+      - Cross-Repo References: schemas/ref.md
   - Integration:
       - Producing Signals: integration/producing.md
       - Consuming Data: integration/consuming.md
@@ -66,6 +67,7 @@ nav:
   - Examples: examples.md
   - API Reference: https://pkg.go.dev/github.com/plexusone/signal-spec
   - Releases:
+      - v0.2.0: releases/v0.2.0.md
       - v0.1.0: releases/v0.1.0.md
 
 extra:
