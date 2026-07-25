@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://plexusone.github.io/signal-spec/schemas/common/">
+        <link rel="canonical" href="https://plexusone.github.io/signal-spec/schemas/ref/">
       
       
-        <link rel="prev" href="../remediation/">
+        <link rel="prev" href="../common/">
       
       
-        <link rel="next" href="../ref/">
+        <link rel="next" href="../../integration/producing/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Common Types - Signal Spec</title>
+        <title>Cross-Repo References - Signal Spec</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#common-types" class="md-skip">
+        <a href="#cross-repo-references-pkgref" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Common Types
+              Cross-Repo References
             
           </span>
         </div>
@@ -575,6 +575,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../common/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -594,7 +622,7 @@
   <span class="md-ellipsis">
     
   
-    Common Types
+    Cross-Repo References
   
 
     
@@ -612,7 +640,7 @@
   <span class="md-ellipsis">
     
   
-    Common Types
+    Cross-Repo References
   
 
     
@@ -638,10 +666,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#severity" class="md-nav__link">
+  <a href="#typedref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Severity
+        TypedRef
       
     </span>
   </a>
@@ -649,10 +677,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#domain" class="md-nav__link">
+  <a href="#format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Domain
+        Format
       
     </span>
   </a>
@@ -660,22 +688,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entity" class="md-nav__link">
+  <a href="#reftype" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entity
+        RefType
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Entity">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-entity-types" class="md-nav__link">
+  <a href="#new" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common Entity Types
+        New
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validateslug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValidateSlug
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatestrict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValidateStrict
       
     </span>
   </a>
@@ -688,22 +771,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sourcesystem" class="md-nav__link">
+  <a href="#usage-in-signal-spec" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SourceSystem
+        Usage in Signal Spec
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SourceSystem">
+    <nav class="md-nav" aria-label="Usage in Signal Spec">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-source-types" class="md-nav__link">
+  <a href="#commonentityref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common Source Types
+        common.Entity.Ref
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#well-known-signalmetadata-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Well-known Signal.Metadata keys
       
     </span>
   </a>
@@ -716,60 +810,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag" class="md-nav__link">
+  <a href="#full-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tag
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tag">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#valid-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Valid Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Invalid Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timerange" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TimeRange
+        Full Example
       
     </span>
   </a>
@@ -777,10 +821,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datetime-format" class="md-nav__link">
+  <a href="#validation-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Datetime Format
+        Validation Summary
       
     </span>
   </a>
@@ -791,34 +835,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ref/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cross-Repo References
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1201,10 +1217,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#severity" class="md-nav__link">
+  <a href="#typedref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Severity
+        TypedRef
       
     </span>
   </a>
@@ -1212,10 +1228,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#domain" class="md-nav__link">
+  <a href="#format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Domain
+        Format
       
     </span>
   </a>
@@ -1223,22 +1239,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entity" class="md-nav__link">
+  <a href="#reftype" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entity
+        RefType
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Entity">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-entity-types" class="md-nav__link">
+  <a href="#new" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common Entity Types
+        New
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validateslug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValidateSlug
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatestrict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValidateStrict
       
     </span>
   </a>
@@ -1251,22 +1322,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sourcesystem" class="md-nav__link">
+  <a href="#usage-in-signal-spec" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SourceSystem
+        Usage in Signal Spec
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SourceSystem">
+    <nav class="md-nav" aria-label="Usage in Signal Spec">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-source-types" class="md-nav__link">
+  <a href="#commonentityref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common Source Types
+        common.Entity.Ref
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#well-known-signalmetadata-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Well-known Signal.Metadata keys
       
     </span>
   </a>
@@ -1279,60 +1361,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag" class="md-nav__link">
+  <a href="#full-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tag
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tag">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#valid-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Valid Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Invalid Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timerange" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TimeRange
+        Full Example
       
     </span>
   </a>
@@ -1340,10 +1372,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datetime-format" class="md-nav__link">
+  <a href="#validation-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Datetime Format
+        Validation Summary
       
     </span>
   </a>
@@ -1370,328 +1402,246 @@
   
 
 
-<h1 id="common-types">Common Types<a class="headerlink" href="#common-types" title="Permanent link">&para;</a></h1>
-<p>Shared types used across Signal, RootCause, and Remediation entities.</p>
-<h2 id="severity">Severity<a class="headerlink" href="#severity" title="Permanent link">&para;</a></h2>
-<p>Impact level indicator.</p>
+<h1 id="cross-repo-references-pkgref">Cross-Repo References (<code>pkg/ref</code>)<a class="headerlink" href="#cross-repo-references-pkgref" title="Permanent link">&para;</a></h1>
+<p><code>pkg/ref</code> defines <code>TypedRef</code>, a compact reference format for linking signal-spec entities — signals, <code>common.Entity</code> values, and well-known <code>Metadata</code> keys — to canonical definitions owned by other repositories in the PlexusOne/ProductBuildersHQ ecosystem (e.g., a market defined in MarketSpec, a customer defined in OrganizationSpec).</p>
+<p>Signal Spec does not own these entities; it only carries typed pointers to them. Resolving a <code>TypedRef</code> to the full entity is the responsibility of the consuming system.</p>
+<h2 id="typedref">TypedRef<a class="headerlink" href="#typedref" title="Permanent link">&para;</a></h2>
+<p><code>TypedRef</code> is a string in <code>{type}:{slug}</code> format.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">TypedRef</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
+<th>Example</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>market:identity-governance</code></td>
+<td>A market defined in MarketSpec</td>
+</tr>
+<tr>
+<td><code>customer:acme-001</code></td>
+<td>A customer defined in OrganizationSpec</td>
+</tr>
+<tr>
+<td><code>capability:sso</code></td>
+<td>A product capability</td>
+</tr>
+<tr>
+<td><code>competitor:okta</code></td>
+<td>A tracked competitor</td>
+</tr>
+<tr>
+<td><code>analyst-report:gartner-mq-iam-2026</code></td>
+<td>An analyst report</td>
+</tr>
+</tbody>
+</table>
+<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{type}:{slug}
+</code></pre></div>
+<ul>
+<li><code>{type}</code> is a well-known <a href="#reftype"><code>RefType</code></a> (see below).</li>
+<li><code>{slug}</code> is a lowercase alphanumeric string with hyphens, matching <code>^[a-z0-9]+(-[a-z0-9]+)*$</code>. It must not be empty, and must not start or end with a hyphen.</li>
+<li>The first <code>:</code> separates type from slug; slugs themselves never contain <code>:</code>.</li>
+</ul>
+<h2 id="reftype">RefType<a class="headerlink" href="#reftype" title="Permanent link">&para;</a></h2>
+<p><code>RefType</code> is a well-known entity reference type.</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
 <th>Value</th>
 <th>Description</th>
-<th>Typical Response</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>critical</code></td>
-<td>Service down, major customer impact</td>
-<td>Immediate response required</td>
+<td><code>ref.TypeCustomer</code></td>
+<td><code>customer</code></td>
+<td>Customer entity (OrganizationSpec)</td>
 </tr>
 <tr>
-<td><code>high</code></td>
-<td>Significant degradation</td>
-<td>Response within hours</td>
+<td><code>ref.TypeCapability</code></td>
+<td><code>capability</code></td>
+<td>Product capability</td>
 </tr>
 <tr>
-<td><code>medium</code></td>
-<td>Noticeable impact, workarounds exist</td>
-<td>Response within days</td>
+<td><code>ref.TypeMarket</code></td>
+<td><code>market</code></td>
+<td>Market entity (MarketSpec)</td>
 </tr>
 <tr>
-<td><code>low</code></td>
-<td>Minor impact</td>
-<td>Normal prioritization</td>
+<td><code>ref.TypeCompetitor</code></td>
+<td><code>competitor</code></td>
+<td>Competitor entity</td>
 </tr>
 <tr>
-<td><code>info</code></td>
-<td>Informational, no action needed</td>
-<td>Review only</td>
+<td><code>ref.TypeAnalystReport</code></td>
+<td><code>analyst-report</code></td>
+<td>Analyst report entity</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/signal-spec/pkg/ref&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">types</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">KnownTypes</span><span class="p">()</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// []ref.RefType{TypeCustomer, TypeCapability, TypeMarket, TypeCompetitor, TypeAnalystReport}</span>
 </code></pre></div>
-<h2 id="domain">Domain<a class="headerlink" href="#domain" title="Permanent link">&para;</a></h2>
-<p>Functional area classification using category/subcategory taxonomy.</p>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<h3 id="new">New<a class="headerlink" href="#new" title="Permanent link">&para;</a></h3>
+<p>Constructs a <code>TypedRef</code> from a type and slug.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeMarket</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;identity-governance&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">// r == &quot;market:identity-governance&quot;</span>
+</code></pre></div>
+<h3 id="parse">Parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
+<p>Splits a <code>TypedRef</code> into its type and slug components. Returns an error if the format is invalid (missing <code>:</code> or empty slug). <code>Parse</code> does not check whether the type is a known type — use <a href="#validate"><code>Validate</code></a> for that.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">typ</span><span class="p">,</span><span class="w"> </span><span class="nx">slug</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="s">&quot;market:identity-governance&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">// typ == ref.TypeMarket, slug == &quot;identity-governance&quot;, err == nil</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="s">&quot;no-colon-here&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">// err != nil</span>
+</code></pre></div>
+<h3 id="validate">Validate<a class="headerlink" href="#validate" title="Permanent link">&para;</a></h3>
+<p>Checks that a <code>TypedRef</code> is well-formed (via <code>Parse</code>) and uses a known <code>RefType</code>. Does <strong>not</strong> validate the slug's character set.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">Validate</span><span class="p">(</span><span class="s">&quot;market:identity-governance&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// nil</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">err</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">Validate</span><span class="p">(</span><span class="s">&quot;unknown:something&quot;</span><span class="p">)</span><span class="w">           </span><span class="c1">// error: unknown ref type</span>
+</code></pre></div>
+<h3 id="validateslug">ValidateSlug<a class="headerlink" href="#validateslug" title="Permanent link">&para;</a></h3>
+<p>Checks that a slug contains only lowercase alphanumeric characters and hyphens, and does not start or end with a hyphen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateSlug</span><span class="p">(</span><span class="s">&quot;identity-governance&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// nil</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">err</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateSlug</span><span class="p">(</span><span class="s">&quot;UPPERCASE&quot;</span><span class="p">)</span><span class="w">            </span><span class="c1">// error</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">err</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateSlug</span><span class="p">(</span><span class="s">&quot;-leading&quot;</span><span class="p">)</span><span class="w">             </span><span class="c1">// error</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nx">err</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateSlug</span><span class="p">(</span><span class="s">&quot;has space&quot;</span><span class="p">)</span><span class="w">            </span><span class="c1">// error</span>
+</code></pre></div>
+<h3 id="validatestrict">ValidateStrict<a class="headerlink" href="#validatestrict" title="Permanent link">&para;</a></h3>
+<p>Combines format, known-type, and slug validation — the strictest check, recommended before persisting or emitting a <code>TypedRef</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateStrict</span><span class="p">(</span><span class="s">&quot;market:identity-governance&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// nil</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nx">err</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateStrict</span><span class="p">(</span><span class="s">&quot;market:UPPER&quot;</span><span class="p">)</span><span class="w">                </span><span class="c1">// error: invalid slug</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nx">err</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateStrict</span><span class="p">(</span><span class="s">&quot;unknown:valid-slug&quot;</span><span class="p">)</span><span class="w">          </span><span class="c1">// error: unknown type</span>
+</code></pre></div>
+<h2 id="usage-in-signal-spec">Usage in Signal Spec<a class="headerlink" href="#usage-in-signal-spec" title="Permanent link">&para;</a></h2>
+<p><code>TypedRef</code> values appear in two places in the signal-spec data model:</p>
+<h3 id="commonentityref"><code>common.Entity.Ref</code><a class="headerlink" href="#commonentityref" title="Permanent link">&para;</a></h3>
+<p><code>Entity</code> has an optional <code>Ref</code> field carrying a typed cross-repo reference, so an entity referenced by a signal or root cause can be linked directly to its canonical definition:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">entity</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nx">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;customer&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Acme Corp&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nx">Ref</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;customer:acme-001&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Acme Corp&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer:acme-001&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="well-known-signalmetadata-keys">Well-known <code>Signal.Metadata</code> keys<a class="headerlink" href="#well-known-signalmetadata-keys" title="Permanent link">&para;</a></h3>
+<p>Signals carry typed references via well-known <code>Metadata</code> keys, defined as <code>signal.Meta*</code> constants:</p>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
+<th>Constant</th>
+<th>Metadata Key</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>name</code></td>
-<td>string</td>
-<td>Yes</td>
-<td>Category (e.g., "authentication")</td>
+<td><code>signal.MetaCustomerRef</code></td>
+<td><code>customer_ref</code></td>
+<td><code>customer:acme-001</code></td>
 </tr>
 <tr>
-<td><code>subdomain</code></td>
-<td>string</td>
-<td>No</td>
-<td>Subcategory (e.g., "oauth")</td>
+<td><code>signal.MetaCapabilityRef</code></td>
+<td><code>capability_ref</code></td>
+<td><code>capability:sso</code></td>
 </tr>
 <tr>
-<td><code>team</code></td>
-<td>string</td>
-<td>No</td>
-<td>Owning team</td>
+<td><code>signal.MetaMarketRef</code></td>
+<td><code>market_ref</code></td>
+<td><code>market:identity-governance</code></td>
+</tr>
+<tr>
+<td><code>signal.MetaCompetitorRef</code></td>
+<td><code>competitor_ref</code></td>
+<td><code>competitor:okta</code></td>
+</tr>
+<tr>
+<td><code>signal.MetaAnalystReportRef</code></td>
+<td><code>analyst_report_ref</code></td>
+<td><code>analyst-report:gartner-mq-iam-2026</code></td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;domain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;authentication&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;subdomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oauth&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&quot;team&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;identity-platform&quot;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">sig</span><span class="p">.</span><span class="nx">Metadata</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">any</span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaMarketRef</span><span class="p">:</span><span class="w">     </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeMarket</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;identity-governance&quot;</span><span class="p">)),</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaCompetitorRef</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeCompetitor</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;okta&quot;</span><span class="p">)),</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">}</span>
 </code></pre></div>
-<p>See <a href="../../concepts/domains/">Domains &amp; Taxonomy</a> for guidelines.</p>
-<h2 id="entity">Entity<a class="headerlink" href="#entity" title="Permanent link">&para;</a></h2>
-<p>A system component referenced by signals or root causes.</p>
+<p>See <a href="../signal/#cross-repo-references">Signal: Cross-Repo References</a> for the full list of metadata keys and how they relate to the <a href="../signal/#type-enum">product signal types</a>.</p>
+<h2 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="s">&quot;github.com/plexusone/signal-spec/pkg/ref&quot;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">)</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeMarket</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;identity-governance&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">ValidateStrict</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span><span class="nx">typ</span><span class="p">,</span><span class="w"> </span><span class="nx">slug</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ref</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type=%s slug=%s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">typ</span><span class="p">,</span><span class="w"> </span><span class="nx">slug</span><span class="p">)</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">    </span><span class="c1">// type=market slug=identity-governance</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="validation-summary">Validation Summary<a class="headerlink" href="#validation-summary" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
+<th>Check</th>
+<th style="text-align: center;"><code>Parse</code></th>
+<th style="text-align: center;"><code>Validate</code></th>
+<th style="text-align: center;"><code>ValidateSlug</code></th>
+<th style="text-align: center;"><code>ValidateStrict</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>type</code></td>
-<td>string</td>
-<td>Yes</td>
-<td>Entity type</td>
+<td>Format (<code>{type}:{slug}</code>, non-empty slug)</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
 </tr>
 <tr>
-<td><code>name</code></td>
-<td>string</td>
-<td>Yes</td>
-<td>Entity identifier</td>
+<td>Known <code>RefType</code></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
 </tr>
 <tr>
-<td><code>ref</code></td>
-<td>string</td>
-<td>No</td>
-<td>Typed cross-repo reference in <code>{type}:{slug}</code> format (e.g., <code>customer:acme-001</code>, <code>market:identity-governance</code>); see <a href="https://github.com/plexusone/signal-spec/tree/main/pkg/ref"><code>pkg/ref</code></a> for known types</td>
-</tr>
-<tr>
-<td><code>attributes</code></td>
-<td>object</td>
-<td>No</td>
-<td>Additional metadata</td>
+<td>Slug character set / hyphen rules</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="common-entity-types">Common Entity Types<a class="headerlink" href="#common-entity-types" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>service</code></td>
-<td>oauth-service, payment-api</td>
-</tr>
-<tr>
-<td><code>endpoint</code></td>
-<td>/api/v1/users, /auth/token</td>
-</tr>
-<tr>
-<td><code>database</code></td>
-<td>users-db, analytics-cluster</td>
-</tr>
-<tr>
-<td><code>queue</code></td>
-<td>order-events, notifications</td>
-</tr>
-<tr>
-<td><code>host</code></td>
-<td>prod-web-01, k8s-node-03</td>
-</tr>
-<tr>
-<td><code>application</code></td>
-<td>mobile-app-ios, web-portal</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;entities&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;service&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oauth-service&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="sourcesystem">SourceSystem<a class="headerlink" href="#sourcesystem" title="Permanent link">&para;</a></h2>
-<p>Identifies the origin of a signal or external reference.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>type</code></td>
-<td>string</td>
-<td>Yes</td>
-<td>Source category</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>string</td>
-<td>Yes</td>
-<td>System name</td>
-</tr>
-<tr>
-<td><code>external_id</code></td>
-<td>string</td>
-<td>No</td>
-<td>Original ID</td>
-</tr>
-<tr>
-<td><code>url</code></td>
-<td>string</td>
-<td>No</td>
-<td>Link to source</td>
-</tr>
-</tbody>
-</table>
-<h3 id="common-source-types">Common Source Types<a class="headerlink" href="#common-source-types" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ticketing</code></td>
-<td>zendesk, jira, freshdesk</td>
-</tr>
-<tr>
-<td><code>alerting</code></td>
-<td>pagerduty, opsgenie, datadog</td>
-</tr>
-<tr>
-<td><code>security</code></td>
-<td>wiz, snyk, crowdstrike</td>
-</tr>
-<tr>
-<td><code>monitoring</code></td>
-<td>prometheus, grafana, newrelic</td>
-</tr>
-<tr>
-<td><code>code_change</code></td>
-<td>github, gitlab, bitbucket</td>
-</tr>
-<tr>
-<td><code>incident</code></td>
-<td>statuspage, incident.io</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ticketing&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;zendesk&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">&quot;external_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ZD-98765&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://company.zendesk.com/tickets/98765&quot;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="tag">Tag<a class="headerlink" href="#tag" title="Permanent link">&para;</a></h2>
-<p>User-defined labels in lowercase kebab-case format.</p>
-<p><strong>Format:</strong> <code>^[a-z][a-z0-9]*(-[a-z0-9]+)*$</code></p>
-<h3 id="valid-examples">Valid Examples<a class="headerlink" href="#valid-examples" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>enterprise</code></li>
-<li><code>auth-related</code></li>
-<li><code>p0-incident</code></li>
-<li><code>redis-cluster</code></li>
-<li><code>q4-2024</code></li>
-</ul>
-<h3 id="invalid-examples">Invalid Examples<a class="headerlink" href="#invalid-examples" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>Enterprise</code> (uppercase)</li>
-<li><code>auth_related</code> (underscore)</li>
-<li><code>P0-incident</code> (uppercase)</li>
-<li><code>-invalid</code> (leading hyphen)</li>
-<li><code>123start</code> (starts with number)</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;enterprise&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mobile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;auth-failure&quot;</span><span class="p">]</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h3>
-<p>Tags are validated using the <code>mogo/text/stringcase.IsKebabCase()</code> function.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/signal-spec/pkg/common&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">tag</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">Tag</span><span class="p">(</span><span class="s">&quot;my-tag&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">tag</span><span class="p">.</span><span class="nx">Validate</span><span class="p">();</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="c1">// Handle invalid tag</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="timerange">TimeRange<a class="headerlink" href="#timerange" title="Permanent link">&para;</a></h2>
-<p>A time interval for trends and validation periods.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>start</code></td>
-<td>datetime</td>
-<td>Start of period</td>
-</tr>
-<tr>
-<td><code>end</code></td>
-<td>datetime</td>
-<td>End of period</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-01T00:00:00Z&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-15T23:59:59Z&quot;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="datetime-format">Datetime Format<a class="headerlink" href="#datetime-format" title="Permanent link">&para;</a></h2>
-<p>All datetime fields use ISO 8601 format with timezone:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>YYYY-MM-DDTHH:MM:SSZ
-</code></pre></div>
-<p>Examples:</p>
-<ul>
-<li><code>2024-03-15T14:30:00Z</code> (UTC)</li>
-<li><code>2024-03-15T10:30:00-04:00</code> (EDT)</li>
-</ul>
 
 
 

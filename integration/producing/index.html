@@ -13,14 +13,17 @@
         <link rel="canonical" href="https://plexusone.github.io/signal-spec/integration/producing/">
       
       
-        <link rel="prev" href="../../schemas/common/">
+        <link rel="prev" href="../../schemas/ref/">
       
       
         <link rel="next" href="../consuming/">
       
       
+        
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -28,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -56,7 +59,6 @@
     
       
 
-    
     
     
   </head>
@@ -202,7 +204,7 @@
         <a href="https://github.com/plexusone/signal-spec" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     plexusone/signal-spec
@@ -249,7 +251,7 @@
       <a href="https://github.com/plexusone/signal-spec" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     plexusone/signal-spec
@@ -271,9 +273,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
       </a>
@@ -311,9 +318,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Concepts
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -322,7 +334,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Concepts
+            
+  
+    Concepts
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -338,9 +354,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
     
   </span>
+  
   
 
       </a>
@@ -361,9 +382,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Lifecycle States
+  
+
     
   </span>
+  
   
 
       </a>
@@ -384,9 +410,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Domains & Taxonomy
+  
+
     
   </span>
+  
   
 
       </a>
@@ -432,9 +463,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Schema Reference
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -443,7 +479,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Schema Reference
+            
+  
+    Schema Reference
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -459,9 +499,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Signal
+  
+
     
   </span>
+  
   
 
       </a>
@@ -482,9 +527,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     RootCause
+  
+
     
   </span>
+  
   
 
       </a>
@@ -505,9 +555,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Remediation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -528,9 +583,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Common Types
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schemas/ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Repo References
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -576,9 +664,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Integration
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -587,7 +680,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Integration
+            
+  
+    Integration
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -612,9 +709,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Producing Signals
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -625,9 +727,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Producing Signals
+  
+
     
   </span>
+  
   
 
       </a>
@@ -650,7 +757,9 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      
+        Overview
+      
     </span>
   </a>
   
@@ -659,7 +768,9 @@
         <li class="md-nav__item">
   <a href="#basic-signal-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Signal Structure
+      
+        Basic Signal Structure
+      
     </span>
   </a>
   
@@ -668,7 +779,9 @@
         <li class="md-nav__item">
   <a href="#go-producer" class="md-nav__link">
     <span class="md-ellipsis">
-      Go Producer
+      
+        Go Producer
+      
     </span>
   </a>
   
@@ -677,7 +790,9 @@
         <li class="md-nav__item">
   <a href="#source-specific-mapping" class="md-nav__link">
     <span class="md-ellipsis">
-      Source-Specific Mapping
+      
+        Source-Specific Mapping
+      
     </span>
   </a>
   
@@ -687,7 +802,9 @@
           <li class="md-nav__item">
   <a href="#support-tickets" class="md-nav__link">
     <span class="md-ellipsis">
-      Support Tickets
+      
+        Support Tickets
+      
     </span>
   </a>
   
@@ -696,7 +813,9 @@
           <li class="md-nav__item">
   <a href="#alerts" class="md-nav__link">
     <span class="md-ellipsis">
-      Alerts
+      
+        Alerts
+      
     </span>
   </a>
   
@@ -705,7 +824,81 @@
           <li class="md-nav__item">
   <a href="#security-findings" class="md-nav__link">
     <span class="md-ellipsis">
-      Security Findings
+      
+        Security Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producing-product-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producing Product Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Producing Product Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancement-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enhancement Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitive Gaps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitor-launches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor Launches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyst-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyst Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Observations
+      
     </span>
   </a>
   
@@ -719,7 +912,9 @@
         <li class="md-nav__item">
   <a href="#id-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      ID Generation
+      
+        ID Generation
+      
     </span>
   </a>
   
@@ -728,7 +923,9 @@
         <li class="md-nav__item">
   <a href="#deduplication" class="md-nav__link">
     <span class="md-ellipsis">
-      Deduplication
+      
+        Deduplication
+      
     </span>
   </a>
   
@@ -737,7 +934,9 @@
         <li class="md-nav__item">
   <a href="#entity-extraction" class="md-nav__link">
     <span class="md-ellipsis">
-      Entity Extraction
+      
+        Entity Extraction
+      
     </span>
   </a>
   
@@ -746,7 +945,9 @@
         <li class="md-nav__item">
   <a href="#severity-mapping" class="md-nav__link">
     <span class="md-ellipsis">
-      Severity Mapping
+      
+        Severity Mapping
+      
     </span>
   </a>
   
@@ -755,7 +956,9 @@
         <li class="md-nav__item">
   <a href="#batch-processing" class="md-nav__link">
     <span class="md-ellipsis">
-      Batch Processing
+      
+        Batch Processing
+      
     </span>
   </a>
   
@@ -764,7 +967,9 @@
         <li class="md-nav__item">
   <a href="#validation-before-emission" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Before Emission
+      
+        Validation Before Emission
+      
     </span>
   </a>
   
@@ -773,7 +978,9 @@
         <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
+      
+        Best Practices
+      
     </span>
   </a>
   
@@ -800,9 +1007,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Consuming Data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -823,9 +1035,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Validation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -853,9 +1070,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     CLI Reference
+  
+
     
   </span>
+  
   
 
       </a>
@@ -875,9 +1097,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Examples
+  
+
     
   </span>
+  
   
 
       </a>
@@ -897,9 +1124,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Reference
+  
+
     
   </span>
+  
   
 
       </a>
@@ -937,9 +1169,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Releases
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -948,9 +1185,41 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Releases
+            
+  
+    Releases
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/v0.2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.2.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -964,9 +1233,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     v0.1.0
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1011,7 +1285,9 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      
+        Overview
+      
     </span>
   </a>
   
@@ -1020,7 +1296,9 @@
         <li class="md-nav__item">
   <a href="#basic-signal-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Signal Structure
+      
+        Basic Signal Structure
+      
     </span>
   </a>
   
@@ -1029,7 +1307,9 @@
         <li class="md-nav__item">
   <a href="#go-producer" class="md-nav__link">
     <span class="md-ellipsis">
-      Go Producer
+      
+        Go Producer
+      
     </span>
   </a>
   
@@ -1038,7 +1318,9 @@
         <li class="md-nav__item">
   <a href="#source-specific-mapping" class="md-nav__link">
     <span class="md-ellipsis">
-      Source-Specific Mapping
+      
+        Source-Specific Mapping
+      
     </span>
   </a>
   
@@ -1048,7 +1330,9 @@
           <li class="md-nav__item">
   <a href="#support-tickets" class="md-nav__link">
     <span class="md-ellipsis">
-      Support Tickets
+      
+        Support Tickets
+      
     </span>
   </a>
   
@@ -1057,7 +1341,9 @@
           <li class="md-nav__item">
   <a href="#alerts" class="md-nav__link">
     <span class="md-ellipsis">
-      Alerts
+      
+        Alerts
+      
     </span>
   </a>
   
@@ -1066,7 +1352,81 @@
           <li class="md-nav__item">
   <a href="#security-findings" class="md-nav__link">
     <span class="md-ellipsis">
-      Security Findings
+      
+        Security Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producing-product-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producing Product Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Producing Product Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancement-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enhancement Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitive Gaps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitor-launches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor Launches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyst-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyst Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Observations
+      
     </span>
   </a>
   
@@ -1080,7 +1440,9 @@
         <li class="md-nav__item">
   <a href="#id-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      ID Generation
+      
+        ID Generation
+      
     </span>
   </a>
   
@@ -1089,7 +1451,9 @@
         <li class="md-nav__item">
   <a href="#deduplication" class="md-nav__link">
     <span class="md-ellipsis">
-      Deduplication
+      
+        Deduplication
+      
     </span>
   </a>
   
@@ -1098,7 +1462,9 @@
         <li class="md-nav__item">
   <a href="#entity-extraction" class="md-nav__link">
     <span class="md-ellipsis">
-      Entity Extraction
+      
+        Entity Extraction
+      
     </span>
   </a>
   
@@ -1107,7 +1473,9 @@
         <li class="md-nav__item">
   <a href="#severity-mapping" class="md-nav__link">
     <span class="md-ellipsis">
-      Severity Mapping
+      
+        Severity Mapping
+      
     </span>
   </a>
   
@@ -1116,7 +1484,9 @@
         <li class="md-nav__item">
   <a href="#batch-processing" class="md-nav__link">
     <span class="md-ellipsis">
-      Batch Processing
+      
+        Batch Processing
+      
     </span>
   </a>
   
@@ -1125,7 +1495,9 @@
         <li class="md-nav__item">
   <a href="#validation-before-emission" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Before Emission
+      
+        Validation Before Emission
+      
     </span>
   </a>
   
@@ -1134,7 +1506,9 @@
         <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
+      
+        Best Practices
+      
     </span>
   </a>
   
@@ -1150,6 +1524,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -1345,6 +1720,252 @@
 </tr>
 </tbody>
 </table>
+<h2 id="producing-product-signals">Producing Product Signals<a class="headerlink" href="#producing-product-signals" title="Permanent link">&para;</a></h2>
+<p>The five product signal types (<code>enhancement_request</code>, <code>competitive_gap</code>, <code>competitor_launch</code>, <code>analyst_finding</code>, <code>market_observation</code>) are produced the same way as operational signals, but typically populate two additional areas:</p>
+<ul>
+<li><strong><code>Metadata</code></strong> with the well-known keys defined by <code>signal.Meta*</code> constants (see <a href="../../schemas/signal/#enhancement-signal-metadata">Enhancement Signal Metadata</a>)</li>
+<li><strong><code>Entity.Ref</code> / <code>Metadata</code> typed references</strong> in <code>{type}:{slug}</code> format via <a href="../../schemas/ref/"><code>pkg/ref</code></a>, linking the signal to canonical entities owned by other repositories (customers, markets, competitors, capabilities, analyst reports)</li>
+</ul>
+<h3 id="enhancement-requests">Enhancement Requests<a class="headerlink" href="#enhancement-requests" title="Permanent link">&para;</a></h3>
+<p>Map feature request board fields to signal fields, including the structured product metadata keys:</p>
+<table>
+<thead>
+<tr>
+<th>Source Field</th>
+<th>Signal Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature ID</td>
+<td><code>source.external_id</code></td>
+</tr>
+<tr>
+<td>Title</td>
+<td><code>summary</code></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>description</code></td>
+</tr>
+<tr>
+<td>Vote count</td>
+<td><code>metadata.votes</code> (<code>signal.MetaVotes</code>)</td>
+</tr>
+<tr>
+<td>Watcher/subscriber count</td>
+<td><code>metadata.subscribers</code> (<code>signal.MetaSubscribers</code>)</td>
+</tr>
+<tr>
+<td>Requesting organizations</td>
+<td><code>metadata.organizations</code> (<code>signal.MetaOrganizations</code>)</td>
+</tr>
+<tr>
+<td>Named customers</td>
+<td><code>metadata.customers</code> (<code>signal.MetaCustomers</code>)</td>
+</tr>
+<tr>
+<td>Linked sales opportunities</td>
+<td><code>metadata.opportunities</code> (<code>signal.MetaOpportunities</code>)</td>
+</tr>
+<tr>
+<td>Estimated ARR at stake</td>
+<td><code>metadata.estimated_arr</code> (<code>signal.MetaEstimatedARR</code>, in cents)</td>
+</tr>
+<tr>
+<td>Affected capability</td>
+<td><code>metadata.capability_ref</code> (<code>signal.MetaCapabilityRef</code>) or <code>entities[].ref</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">sig</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nx">ID</span><span class="p">:</span><span class="w">     </span><span class="nx">generateSignalID</span><span class="p">(),</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">Type</span><span class="p">:</span><span class="w">   </span><span class="nx">signal</span><span class="p">.</span><span class="nx">TypeEnhancementRequest</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">signal</span><span class="p">.</span><span class="nx">StatusNew</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">Source</span><span class="p">:</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">SourceSystem</span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="nx">Type</span><span class="p">:</span><span class="w">       </span><span class="s">&quot;feedback&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="nx">Name</span><span class="p">:</span><span class="w">       </span><span class="s">&quot;productboard&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nx">ExternalID</span><span class="p">:</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nx">URL</span><span class="p">:</span><span class="w">        </span><span class="nx">feature</span><span class="p">.</span><span class="nx">URL</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nx">Domain</span><span class="p">:</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">Domain</span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nx">Name</span><span class="p">:</span><span class="w">      </span><span class="nx">mapToDomain</span><span class="p">(</span><span class="nx">feature</span><span class="p">.</span><span class="nx">Category</span><span class="p">),</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nx">Subdomain</span><span class="p">:</span><span class="w"> </span><span class="nx">mapToSubdomain</span><span class="p">(</span><span class="nx">feature</span><span class="p">.</span><span class="nx">Subcategory</span><span class="p">),</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nx">Severity</span><span class="p">:</span><span class="w">    </span><span class="nx">mapImpactToSeverity</span><span class="p">(</span><span class="nx">feature</span><span class="p">.</span><span class="nx">Impact</span><span class="p">),</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="nx">Summary</span><span class="p">:</span><span class="w">     </span><span class="nx">feature</span><span class="p">.</span><span class="nx">Title</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="nx">Description</span><span class="p">:</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">Description</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nx">Entities</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="p">{</span><span class="nx">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;capability&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">Capability</span><span class="p">,</span><span class="w"> </span><span class="nx">Ref</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeCapability</span><span class="p">,</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">CapabilitySlug</span><span class="p">))},</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="nx">ObservedAt</span><span class="p">:</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">CreatedAt</span><span class="p">,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="nx">ReceivedAt</span><span class="p">:</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">(),</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="nx">Metadata</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">any</span><span class="p">{</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaVotes</span><span class="p">:</span><span class="w">         </span><span class="nx">feature</span><span class="p">.</span><span class="nx">VoteCount</span><span class="p">,</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaSubscribers</span><span class="p">:</span><span class="w">   </span><span class="nx">feature</span><span class="p">.</span><span class="nx">SubscriberCount</span><span class="p">,</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaOrganizations</span><span class="p">:</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">RequestingOrgs</span><span class="p">,</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaCustomers</span><span class="p">:</span><span class="w">     </span><span class="nx">feature</span><span class="p">.</span><span class="nx">CustomerIDs</span><span class="p">,</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaOpportunities</span><span class="p">:</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">LinkedOpportunityIDs</span><span class="p">,</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaEstimatedARR</span><span class="p">:</span><span class="w">  </span><span class="nx">feature</span><span class="p">.</span><span class="nx">EstimatedARRCents</span><span class="p">,</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaCapabilityRef</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeCapability</span><span class="p">,</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">CapabilitySlug</span><span class="p">)),</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaMarketRef</span><span class="p">:</span><span class="w">     </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeMarket</span><span class="p">,</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">MarketSlug</span><span class="p">)),</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="competitive-gaps">Competitive Gaps<a class="headerlink" href="#competitive-gaps" title="Permanent link">&para;</a></h3>
+<p>Map win/loss analysis fields, referencing the losing competitor:</p>
+<table>
+<thead>
+<tr>
+<th>Source Field</th>
+<th>Signal Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Call/deal ID</td>
+<td><code>source.external_id</code></td>
+</tr>
+<tr>
+<td>Loss reason summary</td>
+<td><code>summary</code></td>
+</tr>
+<tr>
+<td>Interview transcript excerpt</td>
+<td><code>description</code></td>
+</tr>
+<tr>
+<td>Losing competitor</td>
+<td><code>metadata.competitor_ref</code> (<code>signal.MetaCompetitorRef</code>) or <code>entities[].ref</code></td>
+</tr>
+<tr>
+<td>Deal size</td>
+<td><code>metadata.estimated_arr</code> (<code>signal.MetaEstimatedARR</code>)</td>
+</tr>
+<tr>
+<td>Account name</td>
+<td><code>metadata.organizations</code> (<code>signal.MetaOrganizations</code>)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">sig</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">Type</span><span class="p">:</span><span class="w">   </span><span class="nx">signal</span><span class="p">.</span><span class="nx">TypeCompetitiveGap</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nx">Status</span><span class="p">:</span><span class="w"> </span><span class="nx">signal</span><span class="p">.</span><span class="nx">StatusNew</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nx">Entities</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="p">{</span><span class="nx">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;competitor&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="nx">deal</span><span class="p">.</span><span class="nx">CompetitorName</span><span class="p">,</span><span class="w"> </span><span class="nx">Ref</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeCompetitor</span><span class="p">,</span><span class="w"> </span><span class="nx">deal</span><span class="p">.</span><span class="nx">CompetitorSlug</span><span class="p">))},</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">Metadata</span><span class="p">:</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">any</span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaCompetitorRef</span><span class="p">:</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeCompetitor</span><span class="p">,</span><span class="w"> </span><span class="nx">deal</span><span class="p">.</span><span class="nx">CompetitorSlug</span><span class="p">)),</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaMarketRef</span><span class="p">:</span><span class="w">     </span><span class="nb">string</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">ref</span><span class="p">.</span><span class="nx">TypeMarket</span><span class="p">,</span><span class="w"> </span><span class="nx">deal</span><span class="p">.</span><span class="nx">MarketSlug</span><span class="p">)),</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaEstimatedARR</span><span class="p">:</span><span class="w">  </span><span class="nx">deal</span><span class="p">.</span><span class="nx">ValueCents</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nx">signal</span><span class="p">.</span><span class="nx">MetaOrganizations</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="nx">deal</span><span class="p">.</span><span class="nx">AccountName</span><span class="p">},</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="competitor-launches">Competitor Launches<a class="headerlink" href="#competitor-launches" title="Permanent link">&para;</a></h3>
+<p>Map competitor intel feed fields:</p>
+<table>
+<thead>
+<tr>
+<th>Source Field</th>
+<th>Signal Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Announcement ID</td>
+<td><code>source.external_id</code></td>
+</tr>
+<tr>
+<td>Headline</td>
+<td><code>summary</code></td>
+</tr>
+<tr>
+<td>Announcement body</td>
+<td><code>description</code></td>
+</tr>
+<tr>
+<td>Announced competitor</td>
+<td><code>metadata.competitor_ref</code> (<code>signal.MetaCompetitorRef</code>) or <code>entities[].ref</code></td>
+</tr>
+<tr>
+<td>Affected market</td>
+<td><code>metadata.market_ref</code> (<code>signal.MetaMarketRef</code>)</td>
+</tr>
+<tr>
+<td>Announcement date</td>
+<td><code>observed_at</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="analyst-findings">Analyst Findings<a class="headerlink" href="#analyst-findings" title="Permanent link">&para;</a></h3>
+<p>Map analyst report extraction fields:</p>
+<table>
+<thead>
+<tr>
+<th>Source Field</th>
+<th>Signal Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Report ID</td>
+<td><code>source.external_id</code></td>
+</tr>
+<tr>
+<td>Finding headline</td>
+<td><code>summary</code></td>
+</tr>
+<tr>
+<td>Finding excerpt</td>
+<td><code>description</code></td>
+</tr>
+<tr>
+<td>Report reference</td>
+<td><code>metadata.analyst_report_ref</code> (<code>signal.MetaAnalystReportRef</code>) or <code>entities[].ref</code></td>
+</tr>
+<tr>
+<td>Affected market</td>
+<td><code>metadata.market_ref</code> (<code>signal.MetaMarketRef</code>)</td>
+</tr>
+<tr>
+<td>Publication date</td>
+<td><code>observed_at</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="market-observations">Market Observations<a class="headerlink" href="#market-observations" title="Permanent link">&para;</a></h3>
+<p>Map market research fields:</p>
+<table>
+<thead>
+<tr>
+<th>Source Field</th>
+<th>Signal Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observation ID</td>
+<td><code>source.external_id</code></td>
+</tr>
+<tr>
+<td>Trend summary</td>
+<td><code>summary</code></td>
+</tr>
+<tr>
+<td>Supporting evidence</td>
+<td><code>description</code></td>
+</tr>
+<tr>
+<td>Affected market</td>
+<td><code>metadata.market_ref</code> (<code>signal.MetaMarketRef</code>) or <code>entities[].ref</code></td>
+</tr>
+<tr>
+<td>Observation date</td>
+<td><code>observed_at</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="id-generation">ID Generation<a class="headerlink" href="#id-generation" title="Permanent link">&para;</a></h2>
 <p>Signal IDs should be:</p>
 <ul>
@@ -1352,42 +1973,42 @@
 <li>Deterministic (same input = same ID) for deduplication</li>
 <li>Human-readable prefix recommended</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">generateSignalID</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;sig-%s-%s&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;2006&quot;</span><span class="p">),</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="nx">uuid</span><span class="p">.</span><span class="nx">New</span><span class="p">().</span><span class="nx">String</span><span class="p">()[:</span><span class="mi">8</span><span class="p">],</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">generateSignalID</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;sig-%s-%s&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">Format</span><span class="p">(</span><span class="s">&quot;2006&quot;</span><span class="p">),</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nx">uuid</span><span class="p">.</span><span class="nx">New</span><span class="p">().</span><span class="nx">String</span><span class="p">()[:</span><span class="mi">8</span><span class="p">],</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="deduplication">Deduplication<a class="headerlink" href="#deduplication" title="Permanent link">&para;</a></h2>
 <p>Use the <code>fingerprint</code> field to identify duplicate signals:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">computeFingerprint</span><span class="p">(</span><span class="nx">sig</span><span class="w"> </span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;%s|%s|%s|%s&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Source</span><span class="p">.</span><span class="nx">Name</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Source</span><span class="p">.</span><span class="nx">ExternalID</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Summary</span><span class="p">,</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">ObservedAt</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">RFC3339</span><span class="p">),</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nx">hash</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">sha256</span><span class="p">.</span><span class="nx">Sum256</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;sha256:%x&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">hash</span><span class="p">[:</span><span class="mi">8</span><span class="p">])</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">computeFingerprint</span><span class="p">(</span><span class="nx">sig</span><span class="w"> </span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;%s|%s|%s|%s&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Source</span><span class="p">.</span><span class="nx">Name</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Source</span><span class="p">.</span><span class="nx">ExternalID</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Summary</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">ObservedAt</span><span class="p">.</span><span class="nx">Format</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">RFC3339</span><span class="p">),</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nx">hash</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">sha256</span><span class="p">.</span><span class="nx">Sum256</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;sha256:%x&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">hash</span><span class="p">[:</span><span class="mi">8</span><span class="p">])</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="entity-extraction">Entity Extraction<a class="headerlink" href="#entity-extraction" title="Permanent link">&para;</a></h2>
 <p>Extract referenced entities from signal content:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">extractEntities</span><span class="p">(</span><span class="nx">description</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">entities</span><span class="w"> </span><span class="p">[]</span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1">// Extract service names</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nx">servicePattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">regexp</span><span class="p">.</span><span class="nx">MustCompile</span><span class="p">(</span><span class="s">`service[:\s]+([a-z0-9-]+)`</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">matches</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">servicePattern</span><span class="p">.</span><span class="nx">FindStringSubmatch</span><span class="p">(</span><span class="nx">description</span><span class="p">);</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">matches</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="nx">entities</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">entities</span><span class="p">,</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="p">{</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">            </span><span class="nx">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">            </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="nx">matches</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="p">})</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">entities</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">extractEntities</span><span class="p">(</span><span class="nx">description</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">entities</span><span class="w"> </span><span class="p">[]</span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="c1">// Extract service names</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nx">servicePattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">regexp</span><span class="p">.</span><span class="nx">MustCompile</span><span class="p">(</span><span class="s">`service[:\s]+([a-z0-9-]+)`</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">matches</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">servicePattern</span><span class="p">.</span><span class="nx">FindStringSubmatch</span><span class="p">(</span><span class="nx">description</span><span class="p">);</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">matches</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="nx">entities</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">entities</span><span class="p">,</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">Entity</span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">            </span><span class="nx">Type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;service&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">            </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="nx">matches</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="p">})</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">entities</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="severity-mapping">Severity Mapping<a class="headerlink" href="#severity-mapping" title="Permanent link">&para;</a></h2>
 <p>Map source-specific severity to signal-spec severity:</p>
@@ -1423,55 +2044,55 @@
 </table>
 <h2 id="batch-processing">Batch Processing<a class="headerlink" href="#batch-processing" title="Permanent link">&para;</a></h2>
 <p>For high-volume sources, batch signals:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">ProcessBatch</span><span class="p">(</span><span class="nx">tickets</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">Ticket</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nx">signals</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">tickets</span><span class="p">))</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ticket</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tickets</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="nx">sig</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">NewSignalFromTicket</span><span class="p">(</span><span class="nx">ticket</span><span class="p">)</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Fingerprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">computeFingerprint</span><span class="p">(</span><span class="nx">sig</span><span class="p">)</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="nx">signals</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">signals</span><span class="p">,</span><span class="w"> </span><span class="nx">sig</span><span class="p">)</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">signals</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">ProcessBatch</span><span class="p">(</span><span class="nx">tickets</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">Ticket</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nx">signals</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">tickets</span><span class="p">))</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">ticket</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tickets</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="nx">sig</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">NewSignalFromTicket</span><span class="p">(</span><span class="nx">ticket</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Fingerprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">computeFingerprint</span><span class="p">(</span><span class="nx">sig</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="nx">signals</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">signals</span><span class="p">,</span><span class="w"> </span><span class="nx">sig</span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">signals</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="validation-before-emission">Validation Before Emission<a class="headerlink" href="#validation-before-emission" title="Permanent link">&para;</a></h2>
 <p>Always validate before emitting:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">emitSignal</span><span class="p">(</span><span class="nx">sig</span><span class="w"> </span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="c1">// Validate required fields</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">sig</span><span class="p">.</span><span class="nx">ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;id is required&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Summary</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;summary is required&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Domain</span><span class="p">.</span><span class="nx">Name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;domain.name is required&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="c1">// Validate tags</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">ValidateTags</span><span class="p">(</span><span class="nx">sig</span><span class="p">.</span><span class="nx">Tags</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">err</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="c1">// Emit to queue/storage</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">publish</span><span class="p">(</span><span class="nx">sig</span><span class="p">)</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">emitSignal</span><span class="p">(</span><span class="nx">sig</span><span class="w"> </span><span class="o">*</span><span class="nx">signal</span><span class="p">.</span><span class="nx">Signal</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="c1">// Validate required fields</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">sig</span><span class="p">.</span><span class="nx">ID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;id is required&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Summary</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;summary is required&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">sig</span><span class="p">.</span><span class="nx">Domain</span><span class="p">.</span><span class="nx">Name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;domain.name is required&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="c1">// Validate tags</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">common</span><span class="p">.</span><span class="nx">ValidateTags</span><span class="p">(</span><span class="nx">sig</span><span class="p">.</span><span class="nx">Tags</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">err</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="c1">// Emit to queue/storage</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">publish</span><span class="p">(</span><span class="nx">sig</span><span class="p">)</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">}</span>
 </code></pre></div>
 <p>Or use the CLI:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>signal-spec<span class="w"> </span>validate<span class="w"> </span>-t<span class="w"> </span>signal<span class="w"> </span>signal.json
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>signal-spec<span class="w"> </span>validate<span class="w"> </span>-t<span class="w"> </span>signal<span class="w"> </span>signal.json
 </code></pre></div>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Preserve Original Data</p>
 <p>Store source-specific data in <code>metadata</code> to preserve context:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;zendesk_ticket_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;incident&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;zendesk_via&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nt">&quot;original_assignee&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;support-team&quot;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;zendesk_ticket_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;incident&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">&quot;zendesk_via&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nt">&quot;original_assignee&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;support-team&quot;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="admonition tip">
@@ -1539,7 +2160,7 @@
       
     
     <a href="https://github.com/plexusone/signal-spec" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
@@ -1556,10 +2177,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
