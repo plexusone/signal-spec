@@ -83,6 +83,11 @@ type Entity struct {
 	// Name is the entity identifier.
 	Name string `json:"name"`
 
+	// Ref is an optional typed cross-repo reference in "{type}:{slug}" format
+	// (e.g., "customer:acme-001", "market:identity-governance").
+	// See pkg/ref for known types and validation.
+	Ref string `json:"ref,omitempty"`
+
 	// Attributes contains additional entity metadata.
 	Attributes map[string]string `json:"attributes,omitempty"`
 }
